@@ -124,10 +124,12 @@ export function Contact() {
                     </Button>
                   </div>
                   
-                  <Button variant="secondary" className="w-full" size="lg">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Resume
-                  </Button>
+                                           <Button variant="secondary" className="w-full" size="lg" asChild>
+                           <a href="/williamblairresume.pdf" download="William_Blair_Resume.pdf">
+                             <Download className="mr-2 h-4 w-4" />
+                             Download Resume
+                           </a>
+                         </Button>
                 </div>
               </CardContent>
             </Card>

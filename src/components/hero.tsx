@@ -34,9 +34,11 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <CopyEmailButton />
-          <Button variant="outline" size="lg" className="w-full sm:w-auto">
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
+          <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+            <a href="/williamblairresume.pdf" download="William_Blair_Resume.pdf">
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
           </Button>
           <Button asChild variant="ghost" size="icon">
             <a href="https://www.linkedin.com/in/williamcblair/" target="_blank" rel="noopener noreferrer">
