@@ -11,7 +11,7 @@ export function About() {
               About Me
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-              I solve security problems in global logistics. I build systems that protect supply chains and the technology behind them.
+              Security-focused logistics professional building resilient supply chain systems.
             </p>
           </div>
         </ScrollReveal>
@@ -22,7 +22,7 @@ export function About() {
               <CardContent className="p-6">
                 <h3 className="font-semibold mb-4">Educational Background</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Pursuing a Bachelor&apos;s degree in Global Logistics Management from Arizona State University&apos;s W.P. Carey School of Business. Previously earned 60 college credits in high school through dual enrollment.
+                  Bachelor&apos;s in Global Logistics Management, Arizona State University. 60 college credits completed in high school.
                 </p>
               </CardContent>
             </Card>
@@ -33,7 +33,7 @@ export function About() {
               <CardContent className="p-6">
                 <h3 className="font-semibold mb-4">Core Interests</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I focus on securing the technology that runs supply chains. I solve complex problems where cybersecurity meets logistics infrastructure and build systems that protect critical operations.
+                  Cybersecurity + logistics infrastructure. Building secure systems for critical supply chain operations.
                 </p>
               </CardContent>
             </Card>

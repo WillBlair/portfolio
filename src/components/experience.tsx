@@ -13,8 +13,7 @@ const experiences = [
     achievements: [
       "Identified ICMP flood attack vector targeting misconfigured firewall, causing complete loss of internal network access.",
       "Configured firewall rules to block malicious traffic, reducing ICMP flow by 98% within 5 minutes of implementation.",
-      "Recommended Google Chronicle SIEM deployment to process 50K+ daily log events with <30s detection latency for anomalous activity.",
-      "Designed recovery process achieving mean time to recovery under 30 minutes for future incidents."
+
     ],
     technologies: ["Incident Response", "DDoS Mitigation", "Firewall Configuration", "SIEM"]
   },
@@ -51,7 +50,7 @@ export function Experience() {
               Applied Experience & Leadership
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-              A history of practical application, hands-on technical projects, and leadership.
+              Practical application and technical leadership.
             </p>
           </div>
         </ScrollReveal>

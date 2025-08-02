@@ -7,7 +7,7 @@ import { DecodeText } from "./decode-text"
 
 export function Hero() {
   return (
-    <section className="flex min-h-[50vh] items-center justify-center px-6 pt-20 pb-16 sm:px-8 sm:pt-24 sm:pb-20 md:px-12 md:pt-28 md:pb-24 rounded-t-xl">
+    <section className="flex min-h-[50vh] items-center justify-center px-6 pt-20 pb-6 sm:px-8 sm:pt-24 sm:pb-8 md:px-12 md:pt-28 md:pb-10 rounded-t-xl">
       <div className="w-full space-y-6 text-center">
         <div className="space-y-4">
           <Badge variant="outline" className="text-sm px-3 py-1">
@@ -24,6 +24,12 @@ export function Hero() {
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
             I secure supply chains and the digital systems that run them. Proven results in cybersecurity, automation, and logistics technology.
           </p>
+          
+          <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+            <Badge variant="outline" className="text-xs px-2 py-1">
+              Pursuing Bachelor's in Global Logistics Management • ASU • June 2026
+            </Badge>
+          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -40,7 +46,7 @@ export function Hero() {
           </Button>
         </div>
 
-        <div className="pt-6">
+        <div className="pt-3">
                     <Image 
             src="/fixedprofile.png" 
             alt="A picture of William Blair" 

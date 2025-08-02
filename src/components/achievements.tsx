@@ -7,7 +7,7 @@ const achievements = [
   {
     icon: ShieldCheck,
     title: "Google Cybersecurity Certificate",
-    description: "Professional certification covering incident response, threat detection, and security frameworks.",
+    description: "Comprehensive cybersecurity training covering incident response, threat detection, and security frameworks.",
     badge: "Certified",
     metric: "180+ Hours",
   },
@@ -43,14 +43,14 @@ export function Achievements() {
             Achievements & Certifications
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-            A track record of technical accomplishments and personal discipline.
+            Technical accomplishments and certifications.
           </p>
         </div>
       </ScrollReveal>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {achievements.map((item, index) => (
           <ScrollReveal key={index} delay={index * 150}>
-            <Card className="border-foreground/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <Card className="border-foreground/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-base font-medium">{item.title}</CardTitle>
               <item.icon className="h-5 w-5 text-muted-foreground" />

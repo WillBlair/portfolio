@@ -43,7 +43,7 @@ export function Contact() {
               Get In Touch
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-              Open to opportunities in cybersecurity and logistics technology. Let&apos;s discuss how we can secure supply chains together.
+              Open to cybersecurity and logistics opportunities.
             </p>
           </div>
         </ScrollReveal>
@@ -54,7 +54,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle>Send a Message</CardTitle>
                 <CardDescription>
-                  Ready to collaborate on securing supply chains and building resilient logistics technology. Let&apos;s discuss new opportunities.
+                  Ready to collaborate on security and logistics projects.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col justify-between h-full">
@@ -104,7 +104,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle>Connect & Download</CardTitle>
                 <CardDescription>
-                  Connect with me on professional platforms and download my resume. I typically respond within a few hours during business days.
+                  Professional connections and resume download. Quick response time.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col justify-between h-full">

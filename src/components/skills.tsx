@@ -31,7 +31,7 @@ export function Skills() {
               Skills & Technologies
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-              A versatile skill set spanning software development, cybersecurity, and automation, allowing for the creation of robust and secure solutions.
+              Development, security, and automation technologies.
             </p>
           </div>
         </ScrollReveal>
