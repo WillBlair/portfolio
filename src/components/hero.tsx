@@ -27,7 +27,7 @@ export function Hero() {
           
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
             <Badge variant="outline" className="text-xs px-2 py-1">
-              Pursuing Bachelor's in Global Logistics Management • ASU • June 2026
+              Pursuing Bachelor&apos;s in Global Logistics Management • ASU • June 2026
             </Badge>
           </div>
         </div>
