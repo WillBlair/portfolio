@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const projects = [
   {
     title: "Theme Switcher - Dark/Light Mode",
-    description: "Chrome extension with 5-star rating and hundreds of users. Canvas API for smart logo detection.",
+    description: "Chrome extension with 5-star rating and active user base. Canvas API for smart logo detection.",
     techStack: ["JavaScript", "HTML/CSS", "Canvas API", "Chrome Extension APIs"],
     liveUrl: "https://chromewebstore.google.com/detail/mjpdmbjkgcolagnnfljmjmifeainflio",
     githubUrl: "#",
