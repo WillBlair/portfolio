@@ -16,8 +16,8 @@ const projects = [
   {
     title: "ExamSim AI App",
     description: "AI study tool generating 20+ questions in 30 seconds. GPT-4o integration for document analysis.",
-    techStack: ["React Native", "OpenAI API (GPT-4o)", "JavaScript"],
-    liveUrl: "#",
+    techStack: ["OpenAI API (GPT-4o)"],
+    liveUrl: "https://studio.pickaxe.co/STUDIOLOZ27FRJZ0WIGI1/NMB075NXOG",
     githubUrl: "#",
     featured: true,
   },

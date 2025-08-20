@@ -22,12 +22,19 @@ export function Hero() {
             [Global Logistics] • [Cybersecurity]
           </div>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-            I secure supply chains and the digital systems that run them. Proven results in cybersecurity, automation, and logistics technology.
+            Proven results in cybersecurity, automation, and logistics technology.
           </p>
           
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-            <Badge variant="outline" className="text-xs px-2 py-1">
-              Pursuing Bachelor&apos;s in Global Logistics Management • ASU • June 2026
+            <Badge
+              variant="outline"
+              className="text-xs px-2 py-1 flex-col sm:flex-row whitespace-normal sm:whitespace-nowrap text-center"
+            >
+              <span className="block sm:inline">Pursuing Bachelor&apos;s in Global Logistics Management</span>
+              <span className="hidden sm:inline mx-1">•</span>
+              <span className="block sm:inline">ASU</span>
+              <span className="hidden sm:inline mx-1">•</span>
+              <span className="block sm:inline">June 2026</span>
             </Badge>
           </div>
         </div>
