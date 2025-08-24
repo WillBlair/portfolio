@@ -29,7 +29,7 @@ const projects = [
     githubUrl: "#",
     featured: true,
     hasVideo: true,
-    videoUrl: "/MorningBrief.mov",
+    videoUrl: "https://youtu.be/ueVGAXJ1Khw",
   },
 ]
 
@@ -128,15 +128,26 @@ export function Projects() {
                     {/* Video player for Morning Brief */}
                     {project.hasVideo && project.videoUrl && (
                       <div className="mb-4">
-                        <video 
-                          controls 
-                          className="w-full rounded-lg neo-border neo-shadow"
-                          preload="metadata"
-                        >
-                          <source src={project.videoUrl} type="video/quicktime" />
-                          <source src={project.videoUrl} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                        {project.videoUrl.includes('youtu') ? (
+                          <iframe
+                            className="w-full aspect-video rounded-lg neo-border neo-shadow"
+                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/')}
+                            title="Morning Brief Demo"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        ) : (
+                          <video 
+                            controls 
+                            className="w-full rounded-lg neo-border neo-shadow"
+                            preload="metadata"
+                          >
+                            <source src={project.videoUrl} type="video/quicktime" />
+                            <source src={project.videoUrl} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        )}
                       </div>
                     )}
                     
