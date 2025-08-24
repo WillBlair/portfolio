@@ -5,17 +5,17 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 const experiences = [
   {
-    title: "Simulated Incident Response Lead",
-    company: "Personal Cybersecurity Project",
-    location: "Tempe, AZ",
-    duration: "Spring 2024",
-    description: "Led incident response simulation for multimedia company under 2-hour ICMP flood DDoS attack (>2,000 packets/sec). Applied NIST Cybersecurity Framework to identify, contain, and recover from network disruption.",
+    title: "Sales Porter & Logistics Coordinator",
+    company: "Ford Motor Co.",
+    location: "Fairfield, CA",
+    duration: "Sep 2022 - Mar 2023",
+    description: "Managed vehicle inventory and logistics operations for high-volume dealership. Maintained detailed inventory tracking systems and collaborated with service teams to optimize vehicle processing workflows.",
     achievements: [
-      "Identified ICMP flood attack vector targeting misconfigured firewall, causing complete loss of internal network access.",
-      "Configured firewall rules to block malicious traffic, reducing ICMP flow by 98% within 5 minutes of implementation.",
-
+      "Maintained detailed inventory tracking systems",
+      "Collaborated with service teams to optimize vehicle processing workflows"
     ],
-    technologies: ["Incident Response", "DDoS Mitigation", "Firewall Configuration", "SIEM"]
+    technologies: ["Inventory Management", "Logistics Coordination", "Process Improvement"],
+    featured: true
   },
   {
     title: "Member, Supply Chain Management Association",
@@ -30,23 +30,27 @@ const experiences = [
     technologies: ["Case Study Analysis", "Logistics Modeling", "Team Collaboration", "Presentation Skills"]
   },
   {
-    title: "Sales Porter & Logistics Coordinator",
-    company: "Ford Motor Co.",
-    location: "Fairfield, CA",
-    duration: "Sep 2022 - Mar 2023",
-    description: "Coordinated vehicle delivery logistics processing 10+ deliveries daily while maintaining 98% inventory accuracy. Reduced customer wait times through efficient sales team coordination.",
-    achievements: [],
-    technologies: ["Inventory Management", "Logistics Coordination", "Process Improvement"]
+    title: "Simulated Incident Response Lead",
+    company: "Personal Cybersecurity Project",
+    location: "Tempe, AZ",
+    duration: "Spring 2024",
+    description: "Led incident response simulation for multimedia company under 2-hour ICMP flood DDoS attack (>2,000 packets/sec). Applied NIST Cybersecurity Framework to identify, contain, and recover from network disruption.",
+    achievements: [
+      "Led comprehensive incident response simulation using NIST Cybersecurity Framework",
+      "Developed incident documentation and post-breach analysis protocols",
+      "Implemented risk assessment procedures"
+    ],
+    technologies: ["Incident Response", "DDoS Mitigation", "Firewall Configuration", "SIEM"]
   }
 ]
 
 export function Experience() {
   return (
-    <section id="experience" className="px-6 py-16 sm:px-8 md:px-12">
+    <section id="experience" className="neo-section neo-accent-green px-6 py-16 sm:px-8 md:px-12">
       <div className="space-y-12">
         <ScrollReveal>
           <div className="text-center space-y-4">
-            <h2 className="font-mono text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="font-mono text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl neo-text neo-border neo-shadow neo-bg-green-soft neo-rounded px-6 py-4 inline-block neo-square">
               Applied Experience & Leadership
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
@@ -61,13 +65,20 @@ export function Experience() {
           
           {experiences.map((exp, index) => (
             <ScrollReveal key={index} delay={index * 300}>
-              <Card className="border-foreground/20 hover:border-primary/50 hover:shadow-lg transition-all duration-300 md:ml-12 relative">
+              <Card className={`neo-dots border-foreground/20 hover:border-primary/50 hover:shadow-lg transition-all duration-300 md:ml-12 relative neo-border neo-rounded ${exp.featured ? 'neo-bg-blue-soft neo-shadow-lg' : ''}`}>
                 {/* Timeline dot */}
-                <div className="absolute -left-14 top-6 w-3 h-3 bg-primary rounded-full border-2 border-background hidden md:block"></div>
+                <div className={`absolute -left-14 top-6 w-4 h-4 border-2 border-background hidden md:block neo-shadow transform rotate-45 ${exp.featured ? 'bg-blue-500' : 'bg-primary'}`}></div>
               <CardHeader>
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div>
-                    <CardTitle className="text-xl">{exp.title}</CardTitle>
+                    <div className="flex items-center gap-3 mb-2">
+                      <CardTitle className="text-xl">{exp.title}</CardTitle>
+                      {exp.featured && (
+                        <Badge variant="secondary" className="neo-bg-orange-soft neo-text neo-border neo-shadow">
+                          Featured Experience
+                        </Badge>
+                      )}
+                    </div>
                     <CardDescription className="text-lg font-medium text-foreground">
                       {exp.company}
                     </CardDescription>
@@ -103,7 +114,7 @@ export function Experience() {
                     <h4 className="font-medium mb-2">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="outline">
+                        <Badge key={techIndex} variant="outline" className={`${techIndex % 2 === 0 ? 'neo-bg-blue-soft' : 'neo-bg-orange-soft'} neo-border neo-shadow neo-text`}>
                           {tech}
                         </Badge>
                       ))}

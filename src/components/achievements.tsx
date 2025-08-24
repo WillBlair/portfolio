@@ -36,10 +36,10 @@ const achievements = [
 
 export function Achievements() {
   return (
-    <section className="px-6 py-16 sm:px-8 md:px-12">
+    <section className="neo-section neo-accent-blue px-6 py-16 sm:px-8 md:px-12">
       <ScrollReveal>
         <div className="text-center space-y-4 mb-12">
-          <h2 className="font-mono text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="font-mono text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl neo-text neo-border neo-shadow neo-bg-purple-soft inline-block px-6 py-3 neo-rounded">
             Achievements & Certifications
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
@@ -50,15 +50,15 @@ export function Achievements() {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {achievements.map((item, index) => (
           <ScrollReveal key={index} delay={index * 150}>
-            <Card className="border-foreground/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+            <Card className="neo-dots neo-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-base font-medium">{item.title}</CardTitle>
+              <CardTitle className="text-base font-bold neo-bg-blue-soft neo-border neo-shadow px-3 py-1 rounded-md inline-block">{item.title}</CardTitle>
               <item.icon className="h-5 w-5 text-muted-foreground" />
             </CardHeader>
             <CardContent className="space-y-3">
-              <Badge variant="secondary" className="text-xs">{item.badge}</Badge>
+              <Badge variant="secondary" className="text-xs neo-bg-orange-soft neo-border neo-shadow">{item.badge}</Badge>
               {item.metric && (
-                <div className="text-xl font-bold text-foreground">{item.metric}</div>
+                <div className="text-lg font-medium text-foreground">{item.metric}</div>
               )}
               <p className="text-sm text-muted-foreground">{item.description}</p>
             </CardContent>

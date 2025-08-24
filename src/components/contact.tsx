@@ -35,11 +35,11 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="px-6 py-16 sm:px-8 md:px-12 bg-muted/50 rounded-b-xl">
+    <section id="contact" className="neo-section neo-accent-blue px-6 py-16 sm:px-8 md:px-12 rounded-b-xl">
       <div className="space-y-12">
         <ScrollReveal>
           <div className="text-center space-y-4">
-            <h2 className="font-mono text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="font-mono text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl neo-text neo-border neo-shadow neo-bg-blue-soft neo-rounded px-6 py-4 inline-block">
               Get In Touch
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
@@ -50,7 +50,7 @@ export function Contact() {
 
         <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
           <ScrollReveal delay={200}>
-            <Card className="border-foreground/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+            <Card className="neo-dots neo-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
               <CardHeader>
                 <CardTitle>Send a Message</CardTitle>
                 <CardDescription>
@@ -59,7 +59,7 @@ export function Contact() {
               </CardHeader>
               <CardContent className="flex flex-col justify-between h-full">
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50">
+                  <div className="flex items-center space-x-3 p-3 rounded-lg neo-bg-orange-soft neo-border">
                     <Mail className="h-5 w-5 text-muted-foreground" />
                     <div className="flex-1">
                       <p className="text-sm font-medium">Email</p>
@@ -84,7 +84,7 @@ export function Contact() {
                   </div>
                   
                   <Button 
-                    className="w-full" 
+                    className="w-full neo-bg-green-soft neo-button-3d-lg" 
                     size="lg" 
                     onClick={() => {
                       copyEmail()
@@ -100,7 +100,7 @@ export function Contact() {
           </ScrollReveal>
 
           <ScrollReveal delay={400}>
-            <Card className="border-foreground/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+            <Card className="neo-dots neo-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
               <CardHeader>
                 <CardTitle>Connect & Download</CardTitle>
                 <CardDescription>
@@ -110,13 +110,13 @@ export function Contact() {
               <CardContent className="flex flex-col justify-between h-full">
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-3">
-                    <Button variant="outline" size="lg" asChild>
+                    <Button variant="outline" size="lg" className="neo-bg-purple-soft neo-button-3d" asChild>
                       <a href="https://www.linkedin.com/in/williamcblair/" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="mr-2 h-4 w-4" />
                         LinkedIn
                       </a>
                     </Button>
-                    <Button variant="outline" size="lg" asChild>
+                    <Button variant="outline" size="lg" className="neo-bg-blue-soft neo-button-3d" asChild>
                       <a href="https://github.com/willblair" target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
                         GitHub
@@ -124,12 +124,12 @@ export function Contact() {
                     </Button>
                   </div>
                   
-                                           <Button variant="secondary" className="w-full" size="lg" asChild>
-                           <a href="/williamblairresume.pdf" download="William_Blair_Resume.pdf">
-                             <Download className="mr-2 h-4 w-4" />
-                             Download Resume
-                           </a>
-                         </Button>
+                  <Button variant="secondary" className="w-full neo-bg-orange-soft neo-button-3d-lg" size="lg" asChild>
+                    <a href="/WilliamBlair-Resume-1.pdf" download="WilliamBlair-Resume-1.pdf">
+                      <Download className="mr-2 h-4 w-4" />
+                      Download Resume
+                    </a>
+                  </Button>
                 </div>
               </CardContent>
             </Card>

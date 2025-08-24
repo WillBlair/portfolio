@@ -7,10 +7,10 @@ import { DecodeText } from "./decode-text"
 
 export function Hero() {
   return (
-    <section className="flex min-h-[50vh] items-center justify-center px-6 pt-20 pb-6 sm:px-8 sm:pt-24 sm:pb-8 md:px-12 md:pt-28 md:pb-10 rounded-t-xl">
+    <section className="neo-section neo-accent-blue neo-dots flex min-h-[50vh] items-center justify-center px-6 pt-20 pb-16 sm:px-8 sm:pt-24 sm:pb-16 md:px-12 md:pt-28 md:pb-16 rounded-t-xl">
       <div className="w-full space-y-6 text-center">
         <div className="space-y-4">
-          <Badge variant="outline" className="text-sm px-3 py-1">
+          <Badge variant="outline" className="text-sm px-3 py-1 neo-bg-orange-soft neo-text neo-border neo-shadow">
             Available for opportunities
           </Badge>
           <DecodeText
@@ -41,13 +41,13 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <CopyEmailButton />
-          <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
-            <a href="/williamblairresume.pdf" download="William_Blair_Resume.pdf">
+          <Button variant="outline" size="lg" className="w-full sm:w-auto neo-bg-green-soft neo-text neo-button-3d-lg" asChild>
+            <a href="/WilliamBlair-Resume-1.pdf" download="WilliamBlair-Resume-1.pdf">
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </a>
           </Button>
-          <Button asChild variant="ghost" size="icon">
+          <Button asChild variant="ghost" size="icon" className="neo-bg-purple-soft neo-button-3d">
             <a href="https://www.linkedin.com/in/williamcblair/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
@@ -56,17 +56,19 @@ export function Hero() {
         </div>
 
         <div className="pt-3">
-                    <Image 
-            src="/fixedprofile.png" 
-            alt="A picture of William Blair" 
-            width={192} 
-            height={192} 
-            className="mx-auto rounded-lg brightness-125 hue-rotate-[-15deg]" 
-            priority
-            quality={85}
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-          />
+          <div className="mx-auto neo-border neo-shadow neo-rounded inline-block neo-dots neo-bg-green-soft">
+            <Image
+              src="/fixedprofile.png"
+              alt="A picture of William Blair"
+              width={192}
+              height={192}
+              className="neo-rounded brightness-125 hue-rotate-[-15deg]"
+              priority
+              quality={85}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+            />
+          </div>
         </div>
 
       </div>

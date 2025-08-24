@@ -42,7 +42,7 @@ export function CopyEmailButton() {
   return (
     <Button
       size="lg"
-      className="w-full sm:w-auto"
+      className="w-full sm:w-auto neo-bg-orange-soft neo-text neo-button-3d-lg"
       onClick={handleEmailCopy}
     >
       <Mail className="mr-2 h-4 w-4" />
