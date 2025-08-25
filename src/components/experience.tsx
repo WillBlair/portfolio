@@ -71,13 +71,8 @@ export function Experience() {
               <CardHeader>
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="mb-2">
                       <CardTitle className="text-xl">{exp.title}</CardTitle>
-                      {exp.featured && (
-                        <Badge variant="secondary" className="neo-bg-orange-soft neo-text neo-border neo-shadow">
-                          Featured Experience
-                        </Badge>
-                      )}
                     </div>
                     <CardDescription className="text-lg font-medium text-foreground">
                       {exp.company}
