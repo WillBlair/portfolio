@@ -244,6 +244,28 @@
     border: 1px solid oklch(0.85 0.08 280);
   }
 
+  /* Dark mode versions of soft backgrounds */
+  .dark .neo-bg-blue-soft {
+    background-color: oklch(0.25 0.08 240);
+    color: var(--foreground);
+    border: 1px solid oklch(0.35 0.12 240);
+  }
+  .dark .neo-bg-green-soft {
+    background-color: oklch(0.25 0.08 120);
+    color: var(--foreground);
+    border: 1px solid oklch(0.35 0.12 120);
+  }
+  .dark .neo-bg-orange-soft {
+    background-color: oklch(0.25 0.08 45);
+    color: var(--foreground);
+    border: 1px solid oklch(0.35 0.12 45);
+  }
+  .dark .neo-bg-purple-soft {
+    background-color: oklch(0.25 0.08 280);
+    color: var(--foreground);
+    border: 1px solid oklch(0.35 0.12 280);
+  }
+
   /* Refined Patterns */
   .neo-dots {
     --neo-dot-color: color-mix(in oklab, var(--foreground) 8%, transparent);
@@ -503,5 +525,19 @@
   .neo-accent-purple { 
     --neo-corner-color: var(--neopurple); 
     background: linear-gradient(135deg, oklch(0.88 0.05 280 / 0.4) 0%, oklch(0.94 0.04 280 / 0.2) 100%);
+  }
+
+  /* Dark mode versions of accent backgrounds */
+  .dark .neo-accent-blue { 
+    background: linear-gradient(135deg, oklch(0.2 0.08 240 / 0.6) 0%, oklch(0.16 0.06 240 / 0.4) 100%);
+  }
+  .dark .neo-accent-green { 
+    background: linear-gradient(135deg, oklch(0.2 0.08 120 / 0.6) 0%, oklch(0.16 0.06 120 / 0.4) 100%);
+  }
+  .dark .neo-accent-orange { 
+    background: linear-gradient(135deg, oklch(0.2 0.08 45 / 0.6) 0%, oklch(0.16 0.06 45 / 0.4) 100%);
+  }
+  .dark .neo-accent-purple { 
+    background: linear-gradient(135deg, oklch(0.2 0.08 280 / 0.6) 0%, oklch(0.16 0.06 280 / 0.4) 100%);
   }
 }
