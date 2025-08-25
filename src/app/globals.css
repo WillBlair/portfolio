@@ -121,15 +121,15 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 
-  /* Neobrutalism color palette - Dark mode */
-  --neoblue: oklch(0.5 0.22 240);
-  --neoblue-foreground: oklch(0.95 0.08 240);
-  --neogreen: oklch(0.52 0.18 120);
-  --neogreen-foreground: oklch(0.95 0.05 120);
-  --neoorange: oklch(0.55 0.22 45);
-  --neoorange-foreground: oklch(0.95 0.05 45);
-  --neopurple: oklch(0.5 0.22 280);
-  --neopurple-foreground: oklch(0.95 0.08 280);
+  /* Neobrutalism color palette - Dark mode - More muted and darker */
+  --neoblue: oklch(0.4 0.12 240);
+  --neoblue-foreground: oklch(0.9 0.04 240);
+  --neogreen: oklch(0.42 0.1 120);
+  --neogreen-foreground: oklch(0.9 0.03 120);
+  --neoorange: oklch(0.45 0.14 45);
+  --neoorange-foreground: oklch(0.9 0.03 45);
+  --neopurple: oklch(0.4 0.12 280);
+  --neopurple-foreground: oklch(0.9 0.04 280);
 }
 
 @layer base {
@@ -244,26 +244,26 @@
     border: 1px solid oklch(0.85 0.08 280);
   }
 
-  /* Dark mode versions of soft backgrounds */
+  /* Dark mode versions of soft backgrounds - More subtle */
   .dark .neo-bg-blue-soft {
-    background-color: oklch(0.25 0.08 240);
+    background-color: oklch(0.2 0.04 240);
     color: var(--foreground);
-    border: 1px solid oklch(0.35 0.12 240);
+    border: 1px solid oklch(0.3 0.08 240);
   }
   .dark .neo-bg-green-soft {
-    background-color: oklch(0.25 0.08 120);
+    background-color: oklch(0.2 0.04 120);
     color: var(--foreground);
-    border: 1px solid oklch(0.35 0.12 120);
+    border: 1px solid oklch(0.3 0.08 120);
   }
   .dark .neo-bg-orange-soft {
-    background-color: oklch(0.25 0.08 45);
+    background-color: oklch(0.2 0.04 45);
     color: var(--foreground);
-    border: 1px solid oklch(0.35 0.12 45);
+    border: 1px solid oklch(0.3 0.08 45);
   }
   .dark .neo-bg-purple-soft {
-    background-color: oklch(0.25 0.08 280);
+    background-color: oklch(0.2 0.04 280);
     color: var(--foreground);
-    border: 1px solid oklch(0.35 0.12 280);
+    border: 1px solid oklch(0.3 0.08 280);
   }
 
   /* Refined Patterns */
@@ -527,17 +527,17 @@
     background: linear-gradient(135deg, oklch(0.88 0.05 280 / 0.4) 0%, oklch(0.94 0.04 280 / 0.2) 100%);
   }
 
-  /* Dark mode versions of accent backgrounds */
+  /* Dark mode versions of accent backgrounds - More subtle */
   .dark .neo-accent-blue { 
-    background: linear-gradient(135deg, oklch(0.2 0.08 240 / 0.6) 0%, oklch(0.16 0.06 240 / 0.4) 100%);
+    background: linear-gradient(135deg, oklch(0.18 0.04 240 / 0.3) 0%, oklch(0.15 0.02 240 / 0.2) 100%);
   }
   .dark .neo-accent-green { 
-    background: linear-gradient(135deg, oklch(0.2 0.08 120 / 0.6) 0%, oklch(0.16 0.06 120 / 0.4) 100%);
+    background: linear-gradient(135deg, oklch(0.18 0.04 120 / 0.3) 0%, oklch(0.15 0.02 120 / 0.2) 100%);
   }
   .dark .neo-accent-orange { 
-    background: linear-gradient(135deg, oklch(0.2 0.08 45 / 0.6) 0%, oklch(0.16 0.06 45 / 0.4) 100%);
+    background: linear-gradient(135deg, oklch(0.18 0.04 45 / 0.3) 0%, oklch(0.15 0.02 45 / 0.2) 100%);
   }
   .dark .neo-accent-purple { 
-    background: linear-gradient(135deg, oklch(0.2 0.08 280 / 0.6) 0%, oklch(0.16 0.06 280 / 0.4) 100%);
+    background: linear-gradient(135deg, oklch(0.18 0.04 280 / 0.3) 0%, oklch(0.15 0.02 280 / 0.2) 100%);
   }
 }
