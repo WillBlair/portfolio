@@ -10,7 +10,7 @@ export function Hero() {
     <section className="neo-section neo-accent-blue neo-dots flex min-h-[50vh] items-center justify-center px-6 pt-20 pb-16 sm:px-8 sm:pt-24 sm:pb-16 md:px-12 md:pt-28 md:pb-16 rounded-t-xl">
       <div className="w-full space-y-6 text-center">
         <div className="space-y-4">
-          <Badge variant="outline" className="text-sm px-3 py-1 neo-bg-orange-soft neo-text neo-border neo-shadow">
+          <Badge variant="outline" className="text-sm px-3 py-1 neo-bg-purple-soft neo-text neo-border neo-shadow">
             Available for opportunities
           </Badge>
           <DecodeText
