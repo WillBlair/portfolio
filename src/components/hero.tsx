@@ -22,7 +22,7 @@ export function Hero() {
             [Supply Chain] • [Cybersecurity]
           </div>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-            Proven results in cybersecurity, automation, and logistics technology.
+            Supply Chain Open to cybersecurity and logistics opportunities.
           </p>
           
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
