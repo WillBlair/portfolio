@@ -19,7 +19,7 @@ export function Hero() {
             animatingClassName="block font-mono text-center text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl/none"
           />
           <div className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
-            [Global Logistics] • [Cybersecurity]
+            [Supply Chain] • [Cybersecurity]
           </div>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
             Proven results in cybersecurity, automation, and logistics technology.
@@ -30,7 +30,7 @@ export function Hero() {
               variant="outline"
               className="text-xs px-2 py-1 flex-col sm:flex-row whitespace-normal sm:whitespace-nowrap text-center"
             >
-              <span className="block sm:inline">Pursuing Bachelor&apos;s in Global Logistics Management</span>
+              <span className="block sm:inline">Pursuing Bachelor&apos;s in Supply Chain Management</span>
               <span className="hidden sm:inline mx-1">•</span>
               <span className="block sm:inline">ASU</span>
               <span className="hidden sm:inline mx-1">•</span>
