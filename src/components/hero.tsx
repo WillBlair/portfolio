@@ -21,9 +21,6 @@ export function Hero() {
           <div className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
             [Supply Chain] • [Cybersecurity]
           </div>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg">
-            Supply Chain Open to cybersecurity and logistics opportunities.
-          </p>
           
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
             <Badge
