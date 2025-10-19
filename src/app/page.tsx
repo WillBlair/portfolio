@@ -16,7 +16,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <div className="w-full max-w-5xl mx-auto border-2 border-foreground/20 rounded-xl mt-8 mb-0 overflow-hidden neo-content-frame">
+        <div className="relative w-full max-w-5xl mx-auto border-2 border-foreground/20 rounded-xl mt-8 mb-0 neo-content-frame">
           <Hero />
           <Projects />
           <Experience />

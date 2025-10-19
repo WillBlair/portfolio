@@ -14,7 +14,7 @@ const achievements = [
   {
     icon: Award,
     title: "TryHackMe Diamond League",
-    description: "Mastered penetration testing through realistic hacking exercises. Advanced through 50+ security challenges.",
+    description: "Mastered penetration testing through realistic hacking exercises. Advanced through 95+ security challenges.",
     badge: "Top 1%",
     metric: "Diamond Rank",
   },
