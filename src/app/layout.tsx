@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Geist_Mono, DM_Serif_Display } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
@@ -18,13 +18,7 @@ const geistMono = Geist_Mono({
   preload: true,
 });
 
-const dmSerifDisplay = DM_Serif_Display({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-  preload: true,
-});
+
 
 export const metadata: Metadata = {
   title: "William Blair - Global Logistics • Cybersecurity",
@@ -201,7 +195,7 @@ export default function RootLayout({
         `}} />
       </head>
       <body
-        className={`${inter.variable} ${geistMono.variable} ${dmSerifDisplay.variable} antialiased`}
+        className={`${inter.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <ThemeProvider
