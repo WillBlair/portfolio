@@ -27,7 +27,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<TabId>("about")
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col">
       {/* Main Content - narrow width */}
       <main className="relative flex-1 w-full max-w-[45rem] mx-auto px-4">
         {/* Theme toggle - positioned relative to content container */}

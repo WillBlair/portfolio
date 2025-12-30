@@ -117,7 +117,7 @@ export default function RootLayout({
             --background: #C9B896;
             --foreground: #1C1917;
             --card: #E0D8CC;
-            --card-foreground: #1C1917;
+            --card-foreground: #000000;
             --popover: #E0D8CC;
             --popover-foreground: #1C1917;
             --primary: #1C1917;
@@ -128,15 +128,15 @@ export default function RootLayout({
             --muted-foreground: #5C564E;
             --accent: #00A86B;
             --accent-foreground: #FFFFFF;
-            --destructive: #E34234;
+            --destructive: #ff2819;
             --border: #1C1917;
             --input: #1C1917;
             --ring: #00A86B;
             --neo-border-color: #1C1917;
             --neo-shadow-color: #1C1917;
             --earth-green: #00A86B;
-            --earth-clay: #E34234;
-            --earth-brown: #6B4423;
+            --earth-clay: #ff2819;
+            --earth-brown: #7f4a1f;
           }
           /* Critical CSS Variables - Dark Theme */
           .dark {
@@ -167,10 +167,19 @@ export default function RootLayout({
           /* Critical base styles for immediate render */
           html, body {
             background-color: var(--background);
+            background-image: url('/bgtriedagain.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: var(--foreground);
             overflow-y: auto !important;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+          }
+          /* Remove background image in dark mode */
+          .dark body, html.dark, .dark {
+            background-image: none;
           }
           /* Prevent FOUC by hiding until fonts load */
           .antialiased { -webkit-font-smoothing: antialiased; }

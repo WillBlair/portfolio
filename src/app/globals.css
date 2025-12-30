@@ -53,7 +53,7 @@
 
   /* Lighter cream card backgrounds for contrast - darkened further */
   --card: #E0D8CC;
-  --card-foreground: #1C1917;
+  --card-foreground: #000000;
 
   --popover: #E0D8CC;
   --popover-foreground: #1C1917;
@@ -71,7 +71,7 @@
   --accent: #00A86B;
   --accent-foreground: #FFFFFF;
 
-  --destructive: #E34234;
+  --destructive: #ff2819;
   --border: #1C1917;
   --input: #1C1917;
   --ring: #00A86B;
@@ -83,13 +83,13 @@
   /* Theme colors - Print/Offset ink inspired */
   --earth-green: #00A86B;
   --earth-olive: #2E8B57;
-  --earth-clay: #E34234;
+  --earth-clay: #ff2819;
   --earth-terracotta: #CD5C5C;
   --earth-yellow: #D4A017;
   --earth-gold: #DAA520;
   --earth-sand: #A89B84;
   --earth-sage: #2D5A3D;
-  --earth-brown: #6B4423;
+  --earth-brown: #7f4a1f;
 
   --sidebar: #D4C4A8;
   --sidebar-foreground: #1C1917;
@@ -174,6 +174,16 @@
 
   body {
     @apply bg-background text-foreground;
+    background-image: url('/bgtriedagain.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  /* Remove background image in dark mode */
+  .dark body {
+    background-image: none;
   }
 
   /* Firefox scrollbar - industrial blocky style */
@@ -321,7 +331,7 @@
   .neo-card {
     background: var(--card);
     border: 3px solid var(--neo-border-color);
-    box-shadow: 5px 5px 0px var(--neo-shadow-color);
+    box-shadow: 2px 2px 0px var(--neo-shadow-color);
   }
 
   .neo-card-hover {

@@ -5,7 +5,7 @@ import Image from "next/image"
 export function About() {
   return (
     <section className="pt-2 pb-6">
-      <div className="grid grid-cols-12 gap-3">
+      <div className="grid grid-cols-12 gap-1.5">
         {/* Main Bio - Wide landscape */}
         <ScrollReveal className="col-span-7 row-span-1">
           <div className="neo-card h-full overflow-hidden group transition-colors flex">
@@ -19,7 +19,7 @@ export function About() {
               />
             </div>
             <div className="p-4 flex items-center">
-              <p className="leading-relaxed font-medium text-foreground">
+              <p className="leading-relaxed font-medium text-foreground text-lg">
                 I&apos;m 21 years old, studying logistics and cybersecurity at ASU, and graduating in 2026.
               </p>
             </div>
@@ -30,7 +30,7 @@ export function About() {
         <ScrollReveal delay={100} className="col-span-5 row-span-1">
           <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
             <div className="p-4 flex-1 flex items-center">
-              <p className="leading-relaxed font-medium text-foreground">
+              <p className="leading-relaxed font-medium text-foreground text-lg">
                 Outside of school, I love playing piano and chess, and I ran the 2025 Austin Marathon.
               </p>
             </div>
@@ -70,7 +70,7 @@ export function About() {
               />
             </div>
             <div className="p-4 flex-1 flex items-center">
-              <p className="leading-relaxed font-medium text-foreground">
+              <p className="leading-relaxed font-medium text-foreground text-lg">
                 I really enjoy building things, especially web apps and automations.
               </p>
             </div>
@@ -90,7 +90,7 @@ export function About() {
               />
             </div>
             <div className="p-4 flex-1 flex items-center">
-              <p className="leading-relaxed font-medium text-foreground">
+              <p className="leading-relaxed font-medium text-foreground text-lg">
                 I&apos;ve also been doing Taekwondo since I was a kid and have my black belt.
               </p>
             </div>
