@@ -94,9 +94,9 @@ export function About() {
                 loading="lazy"
               />
             </div>
-            <div className="p-4 flex-1 flex items-center">
-              <p className="leading-relaxed font-medium text-foreground text-lg">
-                I&apos;ve practiced Taekwondo since childhood and currently hold a black belt.
+            <div className="p-5 flex-1 flex items-center">
+              <p className="leading-relaxed font-medium text-foreground text-base">
+                I&apos;ve also been practicing Taekwondo since childhood and currently hold a black belt.
               </p>
             </div>
           </div>
