@@ -1,0 +1,142 @@
+import { ScrollReveal } from "@/components/scroll-reveal"
+import { ExternalLink } from "lucide-react"
+
+export function About() {
+  return (
+    <section className="py-6 space-y-6">
+      {/* Bio Paragraph */}
+      <ScrollReveal>
+        <div className="neo-card p-6 space-y-4">
+          <p className="leading-relaxed font-medium text-foreground">
+            I&apos;m 21 years old, studying logistics and cybersecurity at ASU, and graduating in 2026.
+            I really enjoy building things, especially web apps and automations.
+          </p>
+
+          <p className="leading-relaxed font-medium text-foreground">
+            Outside of school, I love playing piano and chess, and I ran the 2025 Austin Marathon.
+            I&apos;ve also been doing Taekwondo since I was a kid and have my black belt.
+          </p>
+        </div>
+      </ScrollReveal>
+
+      {/* Two Column Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Left Column - Certifications */}
+        <ScrollReveal delay={100}>
+          <div className="space-y-4">
+            <h3 className="font-mono font-bold text-lg flex items-center gap-2">
+              <span className="inline-block w-4 h-4 bg-[#D94E36]"></span>
+              Certifications
+            </h3>
+
+            {/* Certification Cards */}
+            <div className="space-y-3">
+              <a
+                href="https://www.credly.com/badges/41806b34-b911-469d-9ac0-930b0880d176/linked_in_profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neo-card neo-card-hover p-4 block"
+              >
+                <div className="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 className="font-semibold mb-1 text-sm">Google Cybersecurity Professional Certificate</h4>
+                    <p className="text-muted-foreground text-xs">Incident response, threat detection, and security frameworks.</p>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0" />
+                </div>
+              </a>
+
+              <a
+                href="https://tryhackme.com/certificate/THM-FG8HCJQ8LM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neo-card neo-card-hover p-4 block"
+              >
+                <div className="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 className="font-semibold mb-1 text-sm">Jr Penetration Tester Certificate</h4>
+                    <p className="text-muted-foreground text-xs">TryHackMe • Issued Jul 2025</p>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0" />
+                </div>
+              </a>
+
+              <a
+                href="https://tryhackme.com/certificate/THM-7PRTHHFHTZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neo-card neo-card-hover p-4 block"
+              >
+                <div className="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 className="font-semibold mb-1 text-sm">Web Application Pentesting Certificate</h4>
+                    <p className="text-muted-foreground text-xs">TryHackMe • Issued Dec 2025</p>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0" />
+                </div>
+              </a>
+            </div>
+
+            {/* TryHackMe Badge */}
+            <div className="w-full overflow-hidden rounded-lg">
+              <a
+                href="https://tryhackme.com/p/willblair"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="/tryhackme-badge.png"
+                  alt="TryHackMe Badge"
+                  className="w-full object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Right Column - Blog Posts */}
+        <ScrollReveal delay={200}>
+          <div className="space-y-4">
+            <h3 className="font-mono font-bold text-lg flex items-center gap-2">
+              <span className="inline-block w-4 h-4 bg-[#D94E36]"></span>
+              Blog
+            </h3>
+            <div className="space-y-3">
+              <a href="#" className="neo-card neo-card-hover p-4 block">
+                <div className="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 className="font-semibold mb-1 text-sm">A Hacker Can Reroute Your Package Before It Leaves the Warehouse</h4>
+                    <p className="text-muted-foreground text-xs">Why I&apos;m obsessed with cybersecurity and supply chain.</p>
+                  </div>
+                  <span className="text-muted-foreground text-xs shrink-0">Soon</span>
+                </div>
+              </a>
+
+              <a href="#" className="neo-card neo-card-hover p-4 block">
+                <div className="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 className="font-semibold mb-1 text-sm">Most Warehouses Run on Windows XP. Here&apos;s Why That&apos;s Terrifying.</h4>
+                    <p className="text-muted-foreground text-xs">The hidden infrastructure problem in global logistics.</p>
+                  </div>
+                  <span className="text-muted-foreground text-xs shrink-0">Soon</span>
+                </div>
+              </a>
+
+              <a href="#" className="neo-card neo-card-hover p-4 block">
+                <div className="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 className="font-semibold mb-1 text-sm">I Cried at Mile 24 and Kept Running</h4>
+                    <p className="text-muted-foreground text-xs">What my first marathon taught me about showing up anyway.</p>
+                  </div>
+                  <span className="text-muted-foreground text-xs shrink-0">Soon</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  )
+}

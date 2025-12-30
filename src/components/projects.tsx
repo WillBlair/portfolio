@@ -1,170 +1,222 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink } from "lucide-react"
+import { Github, ExternalLink } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
-const projects = [
+interface Project {
+  title: string
+  tagline: string
+  liveUrl: string
+  githubUrl?: string
+  techStack: string[]
+  hasPreview: boolean
+  videoUrl?: string
+  previewImage?: string
+  accent: string
+}
+
+const projects: Project[] = [
   {
-    title: "'Morning Brief' News Automation Engine", 
-    description: "Automated news aggregation from 5 sources into 10-minute audio briefings. Saves 30 minutes daily.",
-    techStack: ["N8n", "RSS APIs", "Google Cloud TTS API"],
+    title: "ExamSim",
+    tagline: "Full-stack study platform with Stripe payments, Google auth, Neon Postgres, and Gemini API for AI-generated practice exams",
+    liveUrl: "https://www.examsim.io",
+    githubUrl: "https://github.com/WillBlair/examsim",
+    techStack: ["Next.js", "Gemini API", "Neon DB", "Stripe"],
+    hasPreview: false,
+    previewImage: "/examsim-preview.png",
+    accent: "neo-purple",
+  },
+  {
+    title: "PalmRally",
+    tagline: "Hand-tracking Pong via MediaPipe",
+    liveUrl: "https://palmrally.com",
+    githubUrl: "https://github.com/WillBlair/palmrally",
+    techStack: ["MediaPipe", "JavaScript", "Canvas API"],
+    hasPreview: true,
+    accent: "neo-olive",
+  },
+  {
+    title: "n8n Automation Server",
+    tagline: "Self-hosted workflow automation running 24/7 on DigitalOcean with Docker",
+    liveUrl: "https://n8n.williamcblair.com",
+    techStack: ["n8n", "Docker", "DigitalOcean", "Nginx"],
+    hasPreview: false,
+    previewImage: "/digitaloceanblurred.jpg",
+    accent: "neo-clay",
+  },
+  {
+    title: "Morning Brief",
+    tagline: "Automated news aggregation into audio briefings",
     liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-    hasVideo: true,
+    techStack: ["N8n", "RSS APIs", "Google Cloud TTS"],
+    hasPreview: false,
     videoUrl: "https://youtu.be/ueVGAXJ1Khw",
+    accent: "neo-green",
   },
   {
-    title: "Theme Switcher - Dark/Light Mode",
-    description: "Chrome extension with 5-star rating and active user base. Canvas API for smart logo detection.",
-    techStack: ["JavaScript", "HTML/CSS", "Canvas API", "Chrome Extension APIs"],
+    title: "Theme Switcher",
+    tagline: "Chrome extension with smart logo detection • 5★ rating",
     liveUrl: "https://chromewebstore.google.com/detail/mjpdmbjkgcolagnnfljmjmifeainflio",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    title: "ExamSim AI App",
-    description: "AI study tool generating 20+ questions in 30 seconds. GPT-4o integration for document analysis.",
-    techStack: ["OpenAI API (GPT-4o)"],
-    liveUrl: "https://studio.pickaxe.co/STUDIOLOZ27FRJZ0WIGI1/NMB075NXOG",
-    githubUrl: "#",
-    featured: true,
+    techStack: ["JavaScript", "Canvas API", "Chrome APIs"],
+    hasPreview: false,
+    previewImage: "/themeswitcherimage.png",
+    accent: "neo-yellow",
   },
 ]
 
+function ProjectPreview({ project }: { project: Project }) {
+  // Static image preview (fast loading)
+  if (project.previewImage) {
+    return (
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="neo-border neo-shadow overflow-hidden hover:-translate-y-1 transition-transform shrink-0 relative block bg-muted"
+        style={{ width: '180px', height: '135px' }}
+      >
+        <img
+          src={project.previewImage}
+          alt={`${project.title} Preview`}
+          className="w-full h-full object-cover object-top"
+        />
+      </a>
+    )
+  }
+
+  // Live iframe preview
+  if (project.hasPreview && project.liveUrl !== "#") {
+    return (
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="neo-border neo-shadow overflow-hidden hover:-translate-y-1 transition-transform shrink-0 relative block bg-muted"
+        style={{ width: '180px', height: '135px' }}
+      >
+        <iframe
+          src={project.liveUrl}
+          className="pointer-events-none absolute top-0 left-0 origin-top-left"
+          style={{
+            width: '720px',
+            height: '540px',
+            transform: 'scale(0.25)',
+            border: 'none'
+          }}
+          title={`${project.title} Preview`}
+          scrolling="no"
+        />
+      </a>
+    )
+  }
+
+  if (project.videoUrl) {
+    // Extract video ID from youtu.be or youtube.com URL
+    const videoId = project.videoUrl.includes('youtu.be/')
+      ? project.videoUrl.split('youtu.be/')[1]
+      : project.videoUrl.split('v=')[1]?.split('&')[0]
+    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+    return (
+      <a
+        href={project.videoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="neo-border neo-shadow overflow-hidden shrink-0 hover:-translate-y-1 transition-transform relative block"
+        style={{ width: '180px', height: '135px' }}
+      >
+        <img
+          src={thumbnailUrl}
+          alt={`${project.title} Demo`}
+          className="w-full h-full object-cover"
+        />
+        {/* Play button overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="bg-red-600 rounded-lg px-3 py-2">
+            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </a>
+    )
+  }
+
+  return (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`neo-border neo-shadow ${project.accent} overflow-hidden hover:-translate-y-1 transition-transform shrink-0 flex items-center justify-center`}
+      style={{ width: '180px', height: '135px' }}
+    >
+      <div className="text-center p-4">
+        <div className="text-lg font-mono font-black mb-1">{project.title}</div>
+        <ExternalLink className="h-4 w-4 mx-auto" />
+      </div>
+    </a>
+  )
+}
+
 export function Projects() {
   return (
-    <section id="projects" className="neo-section neo-accent-purple px-6 py-16 sm:px-8 md:px-12">
-      <div className="space-y-12">
-        <ScrollReveal>
-          <div className="text-center space-y-4">
-            <h2 className="font-mono text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl neo-text neo-border neo-shadow-lg neo-bg-purple-soft neo-rounded px-6 py-4 inline-block neo-diamond">
-              Featured Projects
-            </h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-lg neo-text">
-              Real products with real users and measurable impact.
-            </p>
-          </div>
-        </ScrollReveal>
-
-        <div className="grid gap-8">
-          {/* First row: Morning Brief centered */}
-          {projects.slice(0, 1).map((project, index) => (
-            <ScrollReveal key={index} delay={index * 200}>
-              <div className="flex justify-center">
-                <div className="w-full max-w-2xl">
-                  <Card className={`${project.featured ? "neo-bg-green-soft neo-border neo-shadow-lg neo-text" : "neo-border neo-shadow neo-text"} hover:neo-shadow-lg transition-all duration-300 hover:-translate-y-1 h-full flex flex-col neo-rounded neo-dots`}>
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <div className="space-y-2">
-                        <CardTitle className="text-xl">{project.title}</CardTitle>
-                                              {project.featured && (
-                        <Badge variant="secondary" className="w-fit neo-bg-purple-soft neo-text neo-border neo-shadow">
-                          Featured
-                        </Badge>
-                      )}
-                      </div>
-                      {/* Only show external link button if project doesn't have embedded video */}
-                      {!project.hasVideo && (
-                        <div className="flex space-x-2">
-                          <Button variant="ghost" size="icon" className="neo-bg-blue-soft neo-border neo-shadow" asChild>
-                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="h-4 w-4" />
-                              <span className="sr-only">Live Demo</span>
-                            </a>
-                          </Button>
-                        </div>
-                      )}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col justify-between">
-                    <CardDescription className="mb-4 leading-relaxed flex-1">
-                      {project.description}
-                    </CardDescription>
-                    
-                    {/* Video player for Morning Brief */}
-                    {project.hasVideo && project.videoUrl && (
-                      <div className="mb-4">
-                        {project.videoUrl.includes('youtu') ? (
-                          <iframe
-                            className="w-full aspect-video rounded-lg neo-border neo-shadow"
-                            src={project.videoUrl.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/')}
-                            title="Morning Brief Demo"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          />
-                        ) : (
-                          <video 
-                            controls 
-                            className="w-full rounded-lg neo-border neo-shadow"
-                            preload="metadata"
-                          >
-                            <source src={project.videoUrl} type="video/quicktime" />
-                            <source src={project.videoUrl} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        )}
-                      </div>
-                    )}
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="outline" className={`neo-border neo-shadow neo-text ${techIndex % 3 === 0 ? 'neo-bg-orange-soft' : techIndex % 3 === 1 ? 'neo-bg-purple-soft' : 'neo-bg-blue-soft'}`}>
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                              </Card>
+    <section className="pt-2 pb-6">
+      <div className="space-y-5">
+        {projects.map((project, index) => (
+          <ScrollReveal key={index} delay={index * 100}>
+            <div className="neo-card neo-card-hover p-4 sm:p-5 relative group">
+              {project.liveUrl !== "#" && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 z-0"
+                  aria-label={`View ${project.title}`}
+                />
+              )}
+              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5">
+                <div className="relative z-10">
+                  <ProjectPreview project={project} />
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
-          
-          {/* Second row: Theme Switcher and ExamSim AI */}
-          <div className="grid gap-8 md:grid-cols-2">
-            {projects.slice(1, 3).map((project, index) => (
-              <ScrollReveal key={index + 1} delay={(index + 1) * 200}>
-                <Card className={`${project.featured ? "neo-bg-blue-soft neo-border neo-shadow-lg neo-text" : "neo-border neo-shadow neo-text"} hover:neo-shadow-lg transition-all duration-300 hover:-translate-y-1 h-full flex flex-col neo-rounded neo-dots`}>
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-2">
-                      <CardTitle className="text-xl neo-text">{project.title}</CardTitle>
-                      {project.featured && (
-                        <Badge variant="secondary" className="w-fit neo-bg-orange-soft neo-text neo-border neo-shadow">
-                          Featured
-                        </Badge>
-                      )}
-                    </div>
-                    <div className="flex space-x-2">
-                      <Button variant="ghost" size="icon" className="neo-bg-purple-soft neo-border neo-shadow" asChild>
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4" />
-                          <span className="sr-only">Live Demo</span>
-                        </a>
-                      </Button>
-                    </div>
+
+                <div className="flex-1 text-center sm:text-left space-y-2 pointer-events-none">
+                  <div className="flex items-center gap-2 justify-center sm:justify-start flex-wrap">
+                    <span className={`w-3 h-3 ${project.accent}`}></span>
+                    <a
+                      href={project.liveUrl !== "#" ? project.liveUrl : undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-mono font-bold hover:underline relative z-10 pointer-events-auto"
+                    >
+                      {project.title}
+                    </a>
+                    {project.githubUrl && (
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground relative z-10 pointer-events-auto">
+                        <Github className="h-4 w-4" />
+                      </a>
+                    )}
+                    {project.liveUrl !== "#" && (
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground relative z-10 pointer-events-auto">
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
                   </div>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col justify-between">
-                  <CardDescription className="mb-4 leading-relaxed flex-1">
-                    {project.description}
-                  </CardDescription>
-                  <div className="flex flex-wrap gap-2">
+
+                  <p className="text-foreground/90 text-sm leading-relaxed">{project.tagline}</p>
+
+                  <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                     {project.techStack.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline" className={`neo-border neo-shadow neo-text ${techIndex % 3 === 0 ? 'neo-bg-green-soft' : techIndex % 3 === 1 ? 'neo-bg-blue-soft' : 'neo-bg-orange-soft'}`}>
+                      <Badge key={techIndex} variant="outline" className="neo-badge text-xs">
                         {tech}
                       </Badge>
                     ))}
                   </div>
-                </CardContent>
-                            </Card>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        ))}
       </div>
     </section>
   )

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
@@ -18,6 +18,14 @@ const geistMono = Geist_Mono({
   preload: true,
 });
 
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  preload: true,
+});
+
 export const metadata: Metadata = {
   title: "William Blair - Global Logistics • Cybersecurity",
   description: "Proven results in cybersecurity, automation, and logistics technology.",
@@ -29,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://williamblair.dev",
-    title: "William Blair - Global Logistics • Cybersecurity", 
+    title: "William Blair - Global Logistics • Cybersecurity",
     description: "Proven results in cybersecurity, automation, and logistics technology.",
     siteName: "William Blair Portfolio",
     images: [
@@ -59,6 +67,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/fixedprofile.png",
+    shortcut: "/fixedprofile.png",
+    apple: "/fixedprofile.png",
+  },
 };
 
 export default function RootLayout({
@@ -68,8 +81,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <style dangerouslySetInnerHTML={{
+          __html: `
+          html, body {
+            overflow-y: auto !important;
+          }
+          /* Force display of scrollbars */
+          html::-webkit-scrollbar, body::-webkit-scrollbar, ::-webkit-scrollbar {
+            display: block !important;
+            width: 20px !important;
+            height: 20px !important;
+          }
+          /* Force track styling */
+          html::-webkit-scrollbar-track, body::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
+            background: var(--background) !important;
+            border-left: 3px solid var(--neo-border-color) !important;
+          }
+          /* Force thumb styling */
+          html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+            background: var(--neo-border-color) !important;
+            border: 2px solid var(--background) !important;
+            border-radius: 0 !important;
+          }
+          html::-webkit-scrollbar-corner, body::-webkit-scrollbar-corner, ::-webkit-scrollbar-corner {
+            background: var(--background) !important;
+          }
+        `}} />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSerifDisplay.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <ThemeProvider

@@ -1,70 +1,53 @@
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
-import { Download, Linkedin } from "lucide-react"
-import { CopyEmailButton } from "./copy-email-button"
-import { DecodeText } from "./decode-text"
 
 export function Hero() {
   return (
-    <section className="neo-section neo-accent-blue neo-dots flex min-h-[50vh] items-center justify-center px-6 pt-20 pb-16 sm:px-8 sm:pt-24 sm:pb-16 md:px-12 md:pt-28 md:pb-16 rounded-t-xl">
-      <div className="w-full space-y-6 text-center">
-        <div className="space-y-4">
-          <DecodeText
-            text="William Blair"
-            className="block font-mono text-center text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl/none"
-            animatingClassName="block font-mono text-center text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl/none"
-          />
-          <div className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
-            [Supply Chain] • [Cybersecurity]
-          </div>
-          
-          <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-            <Badge
-              variant="outline"
-              className="text-xs px-2 py-1 flex-col sm:flex-row whitespace-normal sm:whitespace-nowrap text-center"
-            >
-              <span className="block sm:inline">Pursuing Bachelor&apos;s in Supply Chain Management</span>
-              <span className="hidden sm:inline mx-1">•</span>
-              <span className="block sm:inline">ASU</span>
-              <span className="hidden sm:inline mx-1">•</span>
-              <span className="block sm:inline">June 2026</span>
-            </Badge>
-          </div>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <CopyEmailButton />
-          <Button variant="outline" size="lg" className="w-full sm:w-auto neo-bg-green-soft neo-text neo-button-3d-lg" asChild>
-            <a href="/WilliamBlair-Resume-1.pdf" download="WilliamBlair-Resume-1.pdf">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </a>
-          </Button>
-          <Button asChild variant="ghost" size="icon" className="neo-bg-purple-soft neo-button-3d">
-            <a href="https://www.linkedin.com/in/williamcblair/" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
-            </a>
-          </Button>
-        </div>
-
-        <div className="pt-3">
-          <div className="mx-auto neo-border neo-shadow neo-rounded inline-block neo-dots neo-bg-green-soft">
+    <section className="py-8 sm:py-10">
+      <div className="flex items-start gap-6">
+        {/* Profile Picture - left side */}
+        <div className="shrink-0">
+          <div className="neo-border neo-shadow-lg neo-sage p-2 dark:bg-transparent dark:border-transparent dark:shadow-none dark:p-2">
             <Image
               src="/fixedprofile.png"
-              alt="A picture of William Blair"
-              width={192}
-              height={192}
-              className="neo-rounded brightness-125 hue-rotate-[-15deg]"
+              alt="William Blair"
+              width={200}
+              height={200}
+              className="block"
               priority
               quality={85}
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
             />
           </div>
         </div>
 
+        {/* Name and info - right side */}
+        <div className="flex-1 space-y-3">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl tracking-tight mt-2 font-mono font-bold dark:font-semibold"
+          >
+            William Blair
+          </h1>
+
+          {/* Title badges */}
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="neo-border neo-shadow-sm neo-brown px-4 py-2 font-mono font-bold text-base dark:bg-[#252220] dark:border-transparent dark:shadow-none dark:text-muted-foreground">
+              Supply Chain
+            </span>
+            <span className="font-mono text-xl font-bold">×</span>
+            <span className="neo-border neo-shadow-sm neo-brown px-4 py-2 font-mono font-bold text-base dark:bg-[#252220] dark:border-transparent dark:shadow-none dark:text-muted-foreground">
+              Cybersecurity
+            </span>
+          </div>
+
+          {/* School info - Clear hierarchy */}
+          <div className="space-y-1">
+            <p className="text-foreground font-bold text-lg">
+              Arizona State University
+            </p>
+            <p className="text-muted-foreground italic text-sm">
+              Expected Graduation May 2026
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )
