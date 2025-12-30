@@ -11,15 +11,17 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
     setMounted(true)
   }, [])
 
-  // Prevent flash by not rendering children until mounted
+  // Always wrap children in NextThemesProvider to ensure useTheme() works
   // The inline script in layout.tsx handles initial theme class application
-  if (!mounted) {
-    return (
-      <div style={{ visibility: "hidden" }}>
-        {children}
-      </div>
-    )
-  }
-
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  return (
+    <NextThemesProvider {...props}>
+      {!mounted ? (
+        <div style={{ visibility: "hidden" }}>
+          {children}
+        </div>
+      ) : (
+        children
+      )}
+    </NextThemesProvider>
+  )
 }
