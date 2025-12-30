@@ -4,3 +4,16 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Cache headers for Next.js static assets
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fallback: redirect missing chunks to home to trigger full page reload
+[[redirects]]
+  from = "/_next/static/chunks/*.js"
+  to = "/"
+  status = 302
+  force = false
