@@ -1,14 +1,17 @@
 "use client"
 
 import { useState } from "react"
+import dynamic from "next/dynamic"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
-import { Projects } from "@/components/projects"
-import { Experience } from "@/components/experience"
-import { Skills } from "@/components/skills"
-import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
+
+// Dynamic imports for tab content - reduces initial bundle size
+const Projects = dynamic(() => import("@/components/projects").then(mod => ({ default: mod.Projects })), { ssr: false })
+const Experience = dynamic(() => import("@/components/experience").then(mod => ({ default: mod.Experience })), { ssr: false })
+const Skills = dynamic(() => import("@/components/skills").then(mod => ({ default: mod.Skills })), { ssr: false })
+const Contact = dynamic(() => import("@/components/contact").then(mod => ({ default: mod.Contact })), { ssr: false })
 
 type TabId = "about" | "projects" | "experience" | "skills" | "contact"
 

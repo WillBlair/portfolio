@@ -15,6 +15,7 @@ export function About() {
                 alt="Will at the beach"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
             <div className="p-4 flex items-center">
@@ -40,6 +41,7 @@ export function About() {
                   alt="Marathon bib"
                   fill
                   className="object-contain object-left"
+                  loading="lazy"
                 />
               </div>
               <div className="w-[30%] h-full relative overflow-hidden">
@@ -48,6 +50,7 @@ export function About() {
                   alt="Marathon medal"
                   fill
                   className="object-contain -translate-x-2"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -63,6 +66,7 @@ export function About() {
                 alt="Outward Bound"
                 fill
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="p-4 flex-1 flex items-center">
@@ -82,6 +86,7 @@ export function About() {
                 alt="Taekwondo belt"
                 fill
                 className="object-contain"
+                loading="lazy"
               />
             </div>
             <div className="p-4 flex-1 flex items-center">

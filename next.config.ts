@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   devIndicators: {
     position: 'bottom-right',
   },
+  experimental: {
+    // Enable CSS optimization for reduced render-blocking
+    optimizeCss: true,
+  },
 };
 
 export default nextConfig;
