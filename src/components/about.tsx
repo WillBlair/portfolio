@@ -61,7 +61,7 @@ export function About() {
         </ScrollReveal>
 
         {/* Hobbies - Wide landscape with marathon image */}
-        <ScrollReveal delay={200} className="sm:col-span-7 sm:row-span-1">
+        <ScrollReveal delay={200} className="sm:col-span-5 sm:row-span-1">
           <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
             <div className="h-[130px] shrink-0 relative overflow-hidden">
               <Image
@@ -82,7 +82,7 @@ export function About() {
         </ScrollReveal>
 
         {/* Taekwondo - Vertical card */}
-        <ScrollReveal delay={300} className="sm:col-span-5 sm:row-span-1">
+        <ScrollReveal delay={300} className="sm:col-span-7 sm:row-span-1">
           <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
             <div className="h-[130px] shrink-0 relative overflow-hidden">
               <Image
