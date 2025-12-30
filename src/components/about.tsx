@@ -14,6 +14,7 @@ export function About() {
                 src="/beachsmilecloudyWillBlair(1).jpg"
                 alt="Will at the beach"
                 fill
+                sizes="(max-width: 768px) 40vw, 300px"
                 className="object-cover"
                 priority
               />
@@ -40,6 +41,7 @@ export function About() {
                   src="/justthebib.jpg"
                   alt="Marathon bib"
                   fill
+                  sizes="200px"
                   className="object-contain object-left"
                   loading="lazy"
                 />
@@ -49,6 +51,7 @@ export function About() {
                   src="/medalmarathon-removebg-preview.png"
                   alt="Marathon medal"
                   fill
+                  sizes="100px"
                   className="object-contain -translate-x-2"
                   loading="lazy"
                 />
@@ -65,6 +68,7 @@ export function About() {
                 src="/outwardbound.jpg"
                 alt="Outward Bound"
                 fill
+                sizes="(max-width: 768px) 100vw, 600px"
                 className="object-cover"
                 loading="lazy"
               />
@@ -85,6 +89,7 @@ export function About() {
                 src="/tkwbelt.png"
                 alt="Taekwondo belt"
                 fill
+                sizes="250px"
                 className="object-contain"
                 loading="lazy"
               />

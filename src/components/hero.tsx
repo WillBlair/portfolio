@@ -14,6 +14,7 @@ export function Hero() {
               width={220}
               height={220}
               className="block"
+              style={{ width: 'auto', height: 'auto' }}
               priority
               quality={85}
             />

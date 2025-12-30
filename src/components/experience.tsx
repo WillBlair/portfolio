@@ -75,6 +75,7 @@ export function Experience() {
                           src={exp.logo}
                           alt={`${exp.organization} logo`}
                           fill
+                          sizes="64px"
                           className="object-contain"
                         />
                       </div>

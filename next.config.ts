@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   devIndicators: {
     position: 'bottom-right',
   },
+  images: {
+    // Whitelist custom quality values used in the app
+    qualities: [75, 85],
+  },
   experimental: {
     // Enable CSS optimization for reduced render-blocking
     optimizeCss: true,
