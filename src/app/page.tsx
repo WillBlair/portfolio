@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       {/* Main Content - narrow width */}
-      <main className="relative flex-1 w-full max-w-2xl mx-auto px-4">
+      <main className="relative flex-1 w-full max-w-[45rem] mx-auto px-4">
         {/* Theme toggle - positioned relative to content container */}
         <div className="absolute top-10 right-0 z-50">
           <ThemeToggle />
