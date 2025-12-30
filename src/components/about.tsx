@@ -5,9 +5,9 @@ import Image from "next/image"
 export function About() {
   return (
     <section className="pt-2 pb-6">
-      <div className="grid grid-cols-12 gap-1.5">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-1.5">
         {/* Main Bio - Wide landscape */}
-        <ScrollReveal className="col-span-7 row-span-1">
+        <ScrollReveal className="sm:col-span-7 sm:row-span-1">
           <div className="neo-card h-full overflow-hidden group transition-colors flex">
             <div className="w-2/5 shrink-0 relative overflow-hidden">
               <Image
@@ -28,7 +28,7 @@ export function About() {
         </ScrollReveal>
 
         {/* Builder Interest - Vertical card */}
-        <ScrollReveal delay={100} className="col-span-5 row-span-1">
+        <ScrollReveal delay={100} className="sm:col-span-5 sm:row-span-1">
           <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
             <div className="p-4 flex-1 flex items-center">
               <p className="leading-relaxed font-medium text-foreground text-lg">
@@ -61,7 +61,7 @@ export function About() {
         </ScrollReveal>
 
         {/* Hobbies - Wide landscape with marathon image */}
-        <ScrollReveal delay={200} className="col-span-8 row-span-1">
+        <ScrollReveal delay={200} className="sm:col-span-8 sm:row-span-1">
           <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
             <div className="h-[130px] shrink-0 relative overflow-hidden">
               <Image
@@ -82,7 +82,7 @@ export function About() {
         </ScrollReveal>
 
         {/* Taekwondo - Vertical card */}
-        <ScrollReveal delay={300} className="col-span-4 row-span-1">
+        <ScrollReveal delay={300} className="sm:col-span-4 sm:row-span-1">
           <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
             <div className="h-[130px] shrink-0 relative overflow-hidden">
               <Image

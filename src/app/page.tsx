@@ -31,7 +31,7 @@ export default function Home() {
       {/* Main Content - narrow width */}
       <main className="relative flex-1 w-full max-w-[45rem] mx-auto px-4">
         {/* Theme toggle - positioned relative to content container */}
-        <div className="absolute top-10 right-0 z-50">
+        <div className="absolute top-4 sm:top-10 right-0 z-50">
           <ThemeToggle />
         </div>
         {/* Hero Section */}
