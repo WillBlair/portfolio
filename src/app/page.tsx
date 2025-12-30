@@ -46,8 +46,10 @@ export default function Home() {
                 onClick={() => setActiveTab(tab.id)}
                 className="neo-nav-link"
                 style={activeTab === tab.id ? {
-                  backgroundColor: 'var(--earth-clay)',
+                  backgroundColor: '#ff2819', // Fixed bright red-orange
                   color: '#FFFFFF',
+                  borderColor: '#1C1917', // Force black border
+                  borderWidth: '3px',
                   boxShadow: '9px 9px 0px var(--neo-shadow-color)',
                   transform: 'translate(-6px, -6px)'
                 } : {}}

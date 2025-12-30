@@ -11,20 +11,20 @@ interface TabItem {
   activeColor: string
 }
 
-const tabs: TabItem[] = [
-  { id: "about", name: "About", icon: User, activeColor: "bg-[#D94E36] text-white" },
-  { id: "projects", name: "Projects", icon: FolderOpen, activeColor: "neo-rust" },
-  { id: "experience", name: "Work Experience", icon: Briefcase, activeColor: "neo-navy" },
-  { id: "skills", name: "Skills", icon: Wrench, activeColor: "neo-gold" },
-  { id: "contact", name: "Contact", icon: Mail, activeColor: "neo-rust" },
-]
-
 interface TabNavigationProps {
   activeTab: TabId
   onTabChange: (tab: TabId) => void
 }
 
 export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
+  const tabs: TabItem[] = [
+    { id: "about", name: "About", icon: User, activeColor: "neo-active-nav-orange" },
+    { id: "projects", name: "Projects", icon: FolderOpen, activeColor: "neo-active-nav-orange" },
+    { id: "experience", name: "Work Experience", icon: Briefcase, activeColor: "neo-navy" },
+    { id: "skills", name: "Skills", icon: Wrench, activeColor: "neo-gold" },
+    { id: "contact", name: "Contact", icon: Mail, activeColor: "neo-active-nav-orange" },
+  ]
+
   return (
     <div className="w-full py-4 px-4 bg-background/95">
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto">
