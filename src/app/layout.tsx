@@ -28,7 +28,7 @@ const dmSerifDisplay = DM_Serif_Display({
 
 export const metadata: Metadata = {
   title: "William Blair - Global Logistics • Cybersecurity",
-  description: "Proven results in cybersecurity, automation, and logistics technology.",
+  description: "A personal portfolio focused on security and logistics.",
   keywords: ["cybersecurity", "global logistics", "supply chain security", "automation", "william blair", "portfolio"],
   authors: [{ name: "William Blair" }],
   creator: "William Blair",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://williamblair.dev",
     title: "William Blair - Global Logistics • Cybersecurity",
-    description: "Proven results in cybersecurity, automation, and logistics technology.",
+    description: "A personal portfolio focused on security and logistics.",
     siteName: "William Blair Portfolio",
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "William Blair - Global Logistics • Cybersecurity",
-    description: "Proven results in cybersecurity, automation, and logistics technology.",
+    description: "A personal portfolio focused on security and logistics.",
     creator: "@williamblair",
     images: ["/fixedprofile.png"],
   },

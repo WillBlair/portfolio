@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { MapPin } from "lucide-react"
 
 export function Hero() {
   return (
@@ -10,8 +11,8 @@ export function Hero() {
             <Image
               src="/fixedprofile.png"
               alt="William Blair"
-              width={200}
-              height={200}
+              width={220}
+              height={220}
               className="block"
               priority
               quality={85}
@@ -40,9 +41,12 @@ export function Hero() {
 
           {/* School info - Clear hierarchy */}
           <div className="space-y-1">
-            <p className="text-foreground font-bold text-lg">
-              Arizona State University
-            </p>
+            <div className="flex items-center gap-1.5">
+              <MapPin className="h-4 w-4 text-muted-foreground" />
+              <p className="text-foreground font-bold text-lg leading-none">
+                Arizona State University
+              </p>
+            </div>
             <p className="text-muted-foreground italic text-sm">
               Expected Graduation May 2026
             </p>
