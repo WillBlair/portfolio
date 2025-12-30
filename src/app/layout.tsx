@@ -166,7 +166,7 @@ export default function RootLayout({
             color: var(--foreground);
             overflow-y: auto !important;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+
           }
           /* Remove background image in dark mode */
           .dark body, html.dark, .dark {

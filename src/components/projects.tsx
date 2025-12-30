@@ -34,6 +34,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/WillBlair/palmrally",
     techStack: ["MediaPipe", "JavaScript", "Canvas API"],
     hasPreview: true,
+    previewImage: "/palmrallyss.png",
     accent: "neo-olive",
   },
   {
@@ -164,7 +165,7 @@ export function Projects() {
     <section className="pt-2 pb-6">
       <div className="space-y-5">
         {projects.map((project, index) => (
-          <ScrollReveal key={index} delay={index * 100}>
+          <ScrollReveal key={project.title} delay={index * 100}>
             <div className="neo-card neo-card-hover p-4 sm:p-5 relative group">
               {project.liveUrl !== "#" && (
                 <a
