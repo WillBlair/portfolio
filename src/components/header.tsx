@@ -7,26 +7,26 @@ import { Button } from "@/components/ui/button"
 import { User, FolderOpen, Briefcase, Mail, Menu, X } from "lucide-react"
 
 const navigationItems = [
-  { 
-    name: "About", 
+  {
+    name: "About",
     href: "#about",
     icon: User,
     description: "My story"
   },
-  { 
-    name: "Projects", 
+  {
+    name: "Projects",
     href: "#projects",
     icon: FolderOpen,
     description: "Featured work"
   },
-  { 
-    name: "Experience", 
+  {
+    name: "Experience",
     href: "#experience",
     icon: Briefcase,
     description: "Career path"
   },
-  { 
-    name: "Contact", 
+  {
+    name: "Contact",
     href: "#contact",
     icon: Mail,
     description: "Let's connect"
@@ -40,7 +40,7 @@ export function Header() {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
     if (element) {
-      element.scrollIntoView({ 
+      element.scrollIntoView({
         behavior: "smooth",
         block: "start"
       })
@@ -72,14 +72,14 @@ export function Header() {
         const element = document.getElementById(section)
         if (element) {
           const offsetTop = element.offsetTop
-          
+
           if (scrollPosition >= offsetTop - 50) {
             setActiveSection(section)
             break
           }
         }
       }
-      
+
       if (window.scrollY < 100) {
         setActiveSection("")
       }
@@ -92,9 +92,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4">
-        
+
         {/* Logo */}
-        <button 
+        <button
           onClick={scrollToTop}
           className="font-bold text-lg hover:text-primary transition-colors"
         >
@@ -113,16 +113,16 @@ export function Header() {
                   size="sm"
                   onClick={() => scrollToSection(item.href)}
                   className={`
-                    relative group rounded-full px-4 py-2 transition-all duration-300
-                    ${isActive 
-                      ? "bg-primary text-primary-foreground shadow-md" 
-                      : "hover:bg-background/80"
+                    relative group rounded-full px-4 py-2 transition-colors duration-300
+                    ${isActive
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "hover:bg-background/80 shadow-none"
                     }
                   `}
                 >
                   <item.icon className="h-4 w-4 mr-2" />
                   <span className="font-medium">{item.name}</span>
-                  
+
                   {/* Tooltip */}
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-popover text-popover-foreground text-xs px-2 py-1 rounded-md border opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
                     {item.description}
@@ -136,7 +136,7 @@ export function Header() {
         {/* Right Side - Theme Toggle + Mobile Menu */}
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          
+
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"

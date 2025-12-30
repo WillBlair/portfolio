@@ -325,7 +325,7 @@
   .neo-active-nav-orange {
     background-color: #D94E36 !important;
     color: #FFFFFF !important;
-    border: 3px solid #1C1917 !important;
+    border-color: #1C1917 !important;
   }
 
   /* Force dark shadow on active tabs in dark mode */
@@ -337,7 +337,7 @@
   .neo-card {
     background: var(--card);
     border: 3px solid var(--neo-border-color);
-    box-shadow: 2px 2px 0px var(--neo-shadow-color);
+    box-shadow: 3px 3px 0px var(--neo-shadow-color);
   }
 
   .neo-card-hover {
@@ -407,10 +407,10 @@
   /* ===== INLINE NAV ===== */
   .neo-nav-link {
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    padding: 0.7rem 1.15rem;
+    padding: 0.7rem 0.6rem;
     border: 2px solid var(--neo-border-color);
     box-shadow: 3px 3px 0px var(--neo-shadow-color);
     transition: all 0.1s ease;

@@ -5,10 +5,10 @@ import Image from "next/image"
 export function About() {
   return (
     <section className="pt-2 pb-6">
-      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-1.5">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
         {/* Main Bio - Wide landscape */}
         <ScrollReveal className="sm:col-span-7 sm:row-span-1">
-          <div className="neo-card h-full overflow-hidden group transition-colors flex">
+          <div className="neo-card h-full overflow-hidden group transition-colors flex hover:-translate-y-1 transition-transform">
             <div className="w-2/5 shrink-0 relative overflow-hidden">
               <Image
                 src="/beachsmilecloudyWillBlair(1).jpg"
@@ -29,7 +29,7 @@ export function About() {
 
         {/* Builder Interest - Vertical card */}
         <ScrollReveal delay={100} className="sm:col-span-5 sm:row-span-1">
-          <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
+          <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col hover:-translate-y-1 transition-transform">
             <div className="p-4 flex-1 flex items-center">
               <p className="leading-relaxed font-medium text-foreground text-lg">
                 Outside of school, I love playing piano and chess, and I ran the 2025 Austin Marathon.
@@ -62,7 +62,7 @@ export function About() {
 
         {/* Hobbies - Wide landscape with marathon image */}
         <ScrollReveal delay={200} className="sm:col-span-5 sm:row-span-1">
-          <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
+          <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col hover:-translate-y-1 transition-transform">
             <div className="h-[130px] shrink-0 relative overflow-hidden">
               <Image
                 src="/outwardbound.jpg"
@@ -83,7 +83,7 @@ export function About() {
 
         {/* Taekwondo - Vertical card */}
         <ScrollReveal delay={300} className="sm:col-span-7 sm:row-span-1">
-          <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col">
+          <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col hover:-translate-y-1 transition-transform">
             <div className="h-[130px] shrink-0 relative overflow-hidden">
               <Image
                 src="/tkwbelt.png"

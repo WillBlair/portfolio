@@ -39,19 +39,18 @@ export default function Home() {
 
         {/* Tab Navigation - directly after hero */}
         <nav className="pb-2">
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap gap-2 w-full">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className="neo-nav-link"
+                className="neo-nav-link flex-auto text-center"
                 style={activeTab === tab.id ? {
                   backgroundColor: '#ff2819', // Fixed bright red-orange
                   color: '#FFFFFF',
                   borderColor: '#1C1917', // Force black border
-                  borderWidth: '3px',
-                  boxShadow: '9px 9px 0px var(--neo-shadow-color)',
-                  transform: 'translate(-6px, -6px)'
+                  borderWidth: '2px',
+                  boxShadow: '5px 5px 0px var(--neo-shadow-color)'
                 } : {}}
               >
                 {tab.label}
