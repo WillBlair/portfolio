@@ -87,7 +87,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         {/* Preload critical LCP images */}
-        <link rel="preload" as="image" href="/fixedprofile.png" fetchPriority="high" />
+        <link rel="preload" as="image" href="/bgtriedagain.webp" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/fixedprofile.png" />
         <link rel="preload" as="image" href="/beachsmilecloudyWillBlair(1).jpg" />
         {/* Blocking script to prevent theme flash - runs before any content renders */}
         <script
@@ -167,7 +168,7 @@ export default function RootLayout({
           /* Critical base styles for immediate render */
           html, body {
             background-color: var(--background);
-            background-image: url('/bgtriedagain.png');
+            background-image: url('/bgtriedagain.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;

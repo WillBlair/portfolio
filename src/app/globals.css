@@ -174,7 +174,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: url('/bgtriedagain.png');
+    background-image: url('/bgtriedagain.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
