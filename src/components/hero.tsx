@@ -13,8 +13,8 @@ export function Hero() {
               alt="William Blair"
               width={220}
               height={220}
-              className="block"
-              style={{ width: 'auto', height: 'auto' }}
+              className="block w-[220px] h-[220px] object-cover"
+              style={{ width: '220px', height: '220px' }}
               priority
               quality={85}
             />
