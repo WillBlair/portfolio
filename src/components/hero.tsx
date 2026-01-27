@@ -7,14 +7,13 @@ export function Hero() {
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
         {/* Profile Picture - left side */}
         <div className="shrink-0">
-          <div className="neo-border neo-shadow-lg neo-sage pt-2 px-2 pb-0 dark:bg-transparent dark:border-transparent dark:shadow-none dark:p-2">
+          <div className="neo-border neo-shadow shrink-0 dark:border-transparent dark:shadow-none">
             <Image
-              src="/fixedprofile.png"
+              src="/squareprofilepicture.jpg"
               alt="William Blair"
-              width={220}
-              height={220}
-              className="block w-[220px] h-[220px] object-cover"
-              style={{ width: '220px', height: '220px' }}
+              width={235}
+              height={235}
+              className="block w-[235px] h-[235px] object-cover"
               priority
               quality={85}
             />

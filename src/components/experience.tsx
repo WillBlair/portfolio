@@ -1,9 +1,26 @@
 import { Badge } from "@/components/ui/badge"
-import { CalendarDays, MapPin, Briefcase, Users, Shield } from "lucide-react"
+import { CalendarDays, MapPin, Briefcase, Users, Shield, Terminal } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import Image from "next/image"
 
 const experiences = [
+  {
+    organization: "ASU Hacking Club",
+    role: "Member",
+    type: "Arizona State University",
+    location: "Tempe, AZ",
+    duration: "Jan 2026 – Present",
+    summary: "Active member of the student-led cybersecurity and ethical hacking community.",
+    highlights: [
+      "Participating in weekly Capture The Flag (CTF) competitions",
+      "Learning offensive and defensive security techniques",
+      "Collaborating with peers on security research projects"
+    ],
+    skills: ["Ethical Hacking", "Network Security", "CTF"],
+    accent: "neo-dry-green",
+    icon: Terminal,
+    logo: "/asuhackingclublogo.png",
+  },
   {
     organization: "Ford Motor Co.",
     role: "Logistics Coordinator",
@@ -26,7 +43,7 @@ const experiences = [
     role: "Active Member",
     type: "Arizona State University",
     location: "Tempe, AZ",
-    duration: "2023 – Present",
+    duration: "2024 – Present",
     logo: "/compressedscmalogo.png",
     summary: "Participate in case competitions and workshops focused on real-world supply chain challenges.",
     highlights: [

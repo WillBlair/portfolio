@@ -311,6 +311,11 @@
     color: #1C1917;
   }
 
+  .neo-dry-green {
+    background-color: #6B8E23 !important;
+    color: #FFFFFF !important;
+  }
+
   .neo-navy {
     background-color: #1E3A8A !important;
     color: #FFFFFF;
