@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-4">
           <Separator className="w-full max-w-md" />
           <div className="text-sm text-center text-muted-foreground">
-            Last updated December 2025.
+            Last updated January 2026.
           </div>
         </div>
       </div>
