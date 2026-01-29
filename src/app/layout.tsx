@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "William Blair - Supply Chain • Cybersecurity",
-  description: "A personal portfolio focused on security and logistics.",
+  description: "A personal portfolio focused on security and supply chain.",
   keywords: ["cybersecurity", "global logistics", "supply chain security", "automation", "william blair", "portfolio"],
   authors: [{ name: "William Blair" }],
   creator: "William Blair",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://williamblair.dev",
     title: "William Blair - Supply Chain • Cybersecurity",
-    description: "A personal portfolio focused on security and logistics.",
+    description: "A personal portfolio focused on security and supply chain.",
     siteName: "William Blair Portfolio",
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "William Blair - Supply Chain • Cybersecurity",
-    description: "A personal portfolio focused on security and logistics.",
+    description: "A personal portfolio focused on security and supply chain.",
     creator: "@williamblair",
     images: ["/fixedprofile.png"],
   },
