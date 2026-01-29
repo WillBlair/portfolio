@@ -4,24 +4,19 @@ import { ExternalLink, Award } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Web Development",
-    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Stripe Payments", "Google Auth", "Neon Postgres"],
-    accent: "neo-purple",
+    title: "Supply Chain",
+    skills: ["Inventory Management", "Logistics Operations", "Process Improvement", "Ford Motor Co. Experience"],
+    accent: "neo-navy",
   },
   {
     title: "Cybersecurity",
     skills: ["TryHackMe (157 rooms)", "Google Cybersecurity Cert", "NIST CSF", "Incident Response", "Penetration Testing", "Phishing Analysis"],
-    accent: "neo-clay",
+    accent: "neo-sage",
   },
   {
     title: "Automation & DevOps",
-    skills: ["n8n (15+ workflows)", "Docker", "DigitalOcean", "REST APIs", "Nginx", "Self-Hosting"],
-    accent: "neo-olive",
-  },
-  {
-    title: "Supply Chain",
-    skills: ["Inventory Management", "Logistics Operations", "Process Improvement", "Ford Motor Co. Experience"],
-    accent: "neo-gold",
+    skills: ["n8n (15+ workflows)", "Docker", "DigitalOcean", "REST APIs", "Self-Hosting"],
+    accent: "neo-clay",
   },
 ]
 
@@ -32,7 +27,7 @@ export function Skills() {
         {/* --- LEFT COLUMN: ALL SKILLS --- */}
         <div className="space-y-6">
           <h3 className="font-mono font-bold text-lg flex items-center gap-2 mb-4">
-            <span className="w-4 h-4 bg-[#D94E36]"></span>
+            <span className="w-4 h-4 neo-brown"></span>
             Technical Skills
           </h3>
           <div className="space-y-4">
@@ -59,7 +54,7 @@ export function Skills() {
         {/* --- RIGHT COLUMN: ALL CERTIFICATIONS --- */}
         <div className="space-y-6">
           <h3 className="font-mono font-bold text-lg flex items-center gap-2 mb-4">
-            <span className="w-4 h-4 bg-[var(--earth-gold)]"></span>
+            <span className="w-4 h-4 neo-brown"></span>
             Certifications & Badges
           </h3>
           <ScrollReveal delay={200}>

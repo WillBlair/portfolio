@@ -21,7 +21,7 @@ export function About() {
             </div>
             <div className="p-4 flex items-center">
               <p className="leading-relaxed font-medium text-foreground text-lg">
-                I&apos;m 21 years old, studying logistics and cybersecurity at ASU, and graduating in 2026.
+                I&apos;m 21 years old, studying supply chain management and cybersecurity at ASU, and graduating in 2026.
               </p>
             </div>
           </div>
