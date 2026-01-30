@@ -1,5 +1,5 @@
 # WILLIAM BLAIR
-**Global Logistics • Cybersecurity**
+**Supply Chain Management • Cybersecurity**
 
 📧 willblair47@gmail.com | 🔗 linkedin.com/in/williamcblair | 💻 github.com/willblair
 
@@ -7,7 +7,7 @@
 
 ## PROFESSIONAL SUMMARY
 
-Cybersecurity and logistics professional with proven expertise in securing supply chains and digital systems. Demonstrated ability to deliver measurable results through automation, incident response, and technical leadership. Currently pursuing Bachelor's in Global Logistics Management at Arizona State University (June 2026).
+Cybersecurity and logistics professional with proven expertise in securing supply chains and digital systems. Demonstrated ability to deliver measurable results through automation, incident response, and technical leadership. Currently pursuing Bachelor's in Supply Chain Management at Arizona State University (May 2026).
 
 ---
 
@@ -38,8 +38,8 @@ Cybersecurity and logistics professional with proven expertise in securing suppl
 
 ## EDUCATION
 
-**Bachelor's in Global Logistics Management** *(In Progress)*  
-Arizona State University | Expected Graduation: June 2026
+**Bachelor's in Supply Chain Management** *(In Progress)*  
+Arizona State University | Expected Graduation: May 2026
 
 ---
 
@@ -65,7 +65,7 @@ Arizona State University | Expected Graduation: June 2026
 *Arizona State University* | 2023-Present
 
 - Active participant in professional development and industry networking
-- Engaged in case study analysis for global logistics challenges
+- Engaged in case study analysis for supply chain challenges
 - Contributed to discussions on supply chain security and risk management
 
 ---
@@ -146,7 +146,7 @@ Arizona State University | Expected Graduation: June 2026
 
 ## ADDITIONAL INFORMATION
 
-**Availability**: Open to cybersecurity and logistics opportunities  
+**Availability**: Open to cybersecurity and supply chain opportunities  
 **Security Clearance**: Available upon request  
 **References**: Available upon request
 

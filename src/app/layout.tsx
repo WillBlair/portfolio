@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "William Blair - Supply Chain • Cybersecurity",
   description: "A personal portfolio focused on security and supply chain.",
-  keywords: ["cybersecurity", "global logistics", "supply chain security", "automation", "william blair", "portfolio"],
+  keywords: ["cybersecurity", "supply chain management", "supply chain security", "automation", "william blair", "portfolio"],
   authors: [{ name: "William Blair" }],
   creator: "William Blair",
   metadataBase: new URL("https://williamcblair.com"),

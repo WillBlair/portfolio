@@ -8,7 +8,7 @@ export function About() {
       <ScrollReveal>
         <div className="neo-card p-6 space-y-4">
           <p className="leading-relaxed font-medium text-foreground">
-            I&apos;m 21 years old, studying logistics and cybersecurity at ASU, and graduating in 2026.
+            I&apos;m 21 years old, studying supply chain management and cybersecurity at ASU, and graduating in 2026.
             I really enjoy building things, especially web apps and automations.
           </p>
 
@@ -118,7 +118,7 @@ export function About() {
                 <div className="flex justify-between items-start gap-2">
                   <div>
                     <h4 className="font-semibold mb-1 text-sm">Most Warehouses Run on Windows XP. Here&apos;s Why That&apos;s Terrifying.</h4>
-                    <p className="text-muted-foreground text-xs">The hidden infrastructure problem in global logistics.</p>
+                    <p className="text-muted-foreground text-xs">The hidden infrastructure problem in supply chain.</p>
                   </div>
                   <span className="text-muted-foreground text-xs shrink-0">Soon</span>
                 </div>
