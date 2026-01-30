@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   keywords: ["cybersecurity", "global logistics", "supply chain security", "automation", "william blair", "portfolio"],
   authors: [{ name: "William Blair" }],
   creator: "William Blair",
-  metadataBase: new URL("https://williamblair.dev"),
+  metadataBase: new URL("https://williamcblair.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://williamblair.dev",
+    url: "https://williamcblair.com",
     title: "William Blair - Supply Chain • Cybersecurity",
     description: "A personal portfolio focused on security and supply chain.",
     siteName: "William Blair Portfolio",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "William Blair - Supply Chain • Cybersecurity",
     description: "A personal portfolio focused on security and supply chain.",
     creator: "@williamblair",
