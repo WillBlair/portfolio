@@ -58,7 +58,7 @@ export function Contact() {
               className="neo-button w-full font-mono font-bold h-12 bg-[var(--card)] text-[#1C1917] hover:bg-[#C9B896] dark:bg-[#322E2A] dark:text-[#F5F1E8] dark:hover:bg-[#44403c]"
               asChild
             >
-              <a href="/WilliamBlair-Resume-1.pdf" download>
+              <a href="/WilliamCBlair-Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" />
                 Resume
               </a>
