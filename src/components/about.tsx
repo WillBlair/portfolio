@@ -63,10 +63,10 @@ export function About() {
         {/* Hobbies - Wide landscape with marathon image */}
         <ScrollReveal delay={200} className="sm:col-span-5 sm:row-span-1">
           <div className="neo-card h-[300px] overflow-hidden group transition-colors flex flex-col hover:-translate-y-1 transition-transform">
-            <div className="h-[130px] shrink-0 relative overflow-hidden">
+            <div className="h-[155px] shrink-0 relative overflow-hidden">
               <Image
-                src="/outwardbound.jpg"
-                alt="Outward Bound"
+                src="/italy2.png"
+                alt="Studying abroad in Rome"
                 fill
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="object-cover"
@@ -75,7 +75,7 @@ export function About() {
             </div>
             <div className="p-4 flex-1 flex items-center">
               <p className="leading-relaxed font-medium text-foreground text-lg">
-                I really enjoy building things, especially web apps and automations.
+                I recently spent a semester studying abroad in Rome, Italy.
               </p>
             </div>
           </div>

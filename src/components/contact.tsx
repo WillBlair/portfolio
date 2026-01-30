@@ -43,7 +43,7 @@ export function Contact() {
           {/* Actions */}
           <div className="grid gap-3 sm:grid-cols-2">
             <Button
-              className="neo-button w-full font-mono font-bold h-12 bg-[#1C1917] text-[#F5F1E8] hover:bg-[#1C1917]/90 dark:bg-[#F5F1E8] dark:text-[#1C1917] border-3 border-[var(--neo-border-color)] shadow-[5px_5px_0px_var(--neo-shadow-color)]"
+              className="neo-button w-full font-mono font-bold h-12 bg-[#1C1917] text-[#F5F1E8] hover:bg-[#1C1917]/90 dark:bg-[#F5F1E8] dark:text-[#1C1917] border-3 border-[var(--neo-border-color)]"
               onClick={() => {
                 copyEmail()
                 window.location.href = "mailto:willblair47@gmail.com"
