@@ -9,7 +9,7 @@ const experiences = [
     role: "Member",
     type: "Arizona State University",
     location: "Tempe, AZ",
-    duration: "Jan 2026 – Present",
+    duration: "2025 – Present",
     summary: "Active member of the student-led cybersecurity and ethical hacking community.",
     highlights: [
       "Participating in weekly Capture The Flag (CTF) competitions",
@@ -20,23 +20,6 @@ const experiences = [
     accent: "neo-dry-green",
     icon: Terminal,
     logo: "/asuhackingclublogo.png",
-  },
-  {
-    organization: "Ford Motor Co.",
-    role: "Logistics Coordinator",
-    type: "Full-time",
-    location: "Fairfield, CA",
-    duration: "Sep 2022 – Mar 2023",
-    logo: "/compressedFord-Logo.png",
-    summary: "Coordinated vehicle logistics for a high-volume dealership, managing inventory flow from delivery to customer handoff.",
-    highlights: [
-      "Tracked 200+ vehicles weekly using internal inventory systems",
-      "Reduced misplaced vehicle incidents by streamlining lot organization",
-      "Collaborated with sales and service teams to prioritize vehicle prep"
-    ],
-    skills: ["Vehicle Logistics", "Inventory Systems", "Cross-team Coordination"],
-    accent: "neo-navy",
-    icon: Briefcase,
   },
   {
     organization: "Supply Chain Management Association",
@@ -56,22 +39,23 @@ const experiences = [
     icon: Users,
   },
   {
-    organization: "Incident Response Simulation",
-    role: "Project Lead",
-    type: "Cybersecurity Lab",
-    location: "Tempe, AZ",
-    duration: "Spring 2024",
-    logo: "/compressedNew-Google-Logo.jpg",
-    summary: "Designed and led a simulated DDoS incident response exercise using the NIST Cybersecurity Framework.",
+    organization: "Ford Motor Co.",
+    role: "Logistics Coordinator",
+    type: "Full-time",
+    location: "Fairfield, CA",
+    duration: "2022 – 2023",
+    logo: "/compressedFord-Logo.png",
+    summary: "Coordinated vehicle logistics for a high-volume dealership, managing inventory flow from delivery to customer handoff.",
     highlights: [
-      "Built a realistic attack scenario with traffic analysis and escalation procedures",
-      "Documented response playbook including containment and recovery steps",
-      "Presented findings and lessons learned to peers"
+      "Tracked 200+ vehicles weekly using internal inventory systems",
+      "Reduced misplaced vehicle incidents by streamlining lot organization",
+      "Collaborated with sales and service teams to prioritize vehicle prep"
     ],
-    skills: ["NIST CSF", "Incident Response", "Threat Analysis"],
-    accent: "neo-terracotta",
-    icon: Shield,
-  }
+    skills: ["Vehicle Logistics", "Inventory Systems", "Cross-team Coordination"],
+    accent: "neo-navy",
+    icon: Briefcase,
+  },
+
 ]
 
 export function Experience() {

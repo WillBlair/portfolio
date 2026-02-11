@@ -18,6 +18,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Global Supply Chain Health Index",
+    tagline: "Real-time supply chain monitor quantifying global risk using FRED, Open-Meteo, and Gemini API for automated news analysis",
+    liveUrl: "https://gscindex.com",
+    githubUrl: "https://github.com/WillBlair/gscindex",
+    techStack: ["Python", "Gemini API", "NumPy", "FRED API"],
+    hasPreview: false,
+    previewImage: "/GSCIDASHBOARD.png",
+    accent: "neo-navy",
+  },
+  {
     title: "ExamSim",
     tagline: "Full-stack study platform with Stripe payments, Google auth, Neon Postgres, and Gemini API for AI-generated practice exams",
     liveUrl: "https://www.examsim.io",
