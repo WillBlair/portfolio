@@ -6,7 +6,7 @@ import Image from "next/image"
 const experiences = [
   {
     organization: "ASU Hacking Club",
-    role: "Member",
+    role: "CTF Team",
     type: "Arizona State University",
     location: "Tempe, AZ",
     duration: "2025 – Present",
