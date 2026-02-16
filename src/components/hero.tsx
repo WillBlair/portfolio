@@ -48,7 +48,7 @@ export function Hero() {
               </p>
             </div>
             <p className="text-muted-foreground italic text-sm">
-              Expected Graduation May 2026
+              Expected Graduation May 2027
             </p>
           </div>
         </div>
