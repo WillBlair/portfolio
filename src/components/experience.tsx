@@ -5,6 +5,23 @@ import Image from "next/image"
 
 const experiences = [
   {
+    organization: "Superbo",
+    role: "Data Analyst Intern",
+    type: "Internship",
+    location: "United States",
+    duration: "Aug 2025 – Present",
+    summary: "Building automated data pipelines and ranking systems to drive prospect evaluation and business research at scale.",
+    highlights: [
+      "Engineered an Excel-based weighted ranking system to prioritize prospects by performance metrics, supporting supplier evaluation workflows",
+      "Built a Python pipeline to aggregate data on 10,000+ enterprises, optimizing API costs via rate-limiting",
+      "Deployed a scalable data-mining automation tool, transforming manual research into a fully automated process",
+    ],
+    skills: ["Python", "Data Analysis", "Automation", "Excel"],
+    accent: "bg-white",
+    icon: Briefcase,
+    logo: "/superbologo.jpg",
+  },
+  {
     organization: "ASU Hacking Club",
     role: "CTF Team",
     type: "Arizona State University",
