@@ -9,7 +9,7 @@ const experiences = [
     role: "Data Analyst Intern",
     type: "Internship",
     location: "United States",
-    duration: "Aug 2025 – Present",
+    duration: "Aug – Dec 2025",
     summary: "Building automated data pipelines and ranking systems to drive prospect evaluation and business research at scale.",
     highlights: [
       "Engineered an Excel-based weighted ranking system to prioritize prospects by performance metrics, supporting supplier evaluation workflows",
