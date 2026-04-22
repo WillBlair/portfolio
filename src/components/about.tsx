@@ -101,6 +101,48 @@ export function About() {
             </div>
           </div>
         </ScrollReveal>
+        {/* Hackathons - Full width landscape */}
+        <ScrollReveal delay={400} className="sm:col-span-12 sm:row-span-1">
+          <div className="neo-card h-auto sm:h-[300px] overflow-hidden group transition-colors flex flex-col hover:-translate-y-1 transition-transform">
+            <div className="p-4 sm:px-5 flex-1 flex items-center">
+              <p className="leading-relaxed font-medium text-foreground text-lg">
+                I love to build, and I've taken 1st place in three hackathons: Anthropic, SpaceHACK for Sustainability, and Innovation Hacks 2.0.
+              </p>
+            </div>
+            <div className="w-full h-[130px] sm:h-[155px] shrink-0 flex border-t border-[var(--neo-border-color)]">
+              <div className="w-1/3 h-full relative overflow-hidden border-r border-[var(--neo-border-color)] group/pic">
+                <Image 
+                  src="/anthropic_hackathon_win(1).jpg" 
+                  alt="Anthropic Hackathon" 
+                  fill 
+                  sizes="(max-width: 768px) 33vw, 250px" 
+                  className="object-cover transition-transform duration-500 group-hover/pic:scale-105" 
+                  loading="lazy" 
+                />
+              </div>
+              <div className="w-1/3 h-full relative overflow-hidden border-r border-[var(--neo-border-color)] group/pic">
+                <Image 
+                  src="/SpaceHack_win(1).jpg" 
+                  alt="SpaceHACK for Sustainability" 
+                  fill 
+                  sizes="(max-width: 768px) 33vw, 250px" 
+                  className="object-cover transition-transform duration-500 group-hover/pic:scale-105" 
+                  loading="lazy" 
+                />
+              </div>
+              <div className="w-1/3 h-full relative overflow-hidden group/pic">
+                <Image 
+                  src="/Innovationhack-crowd.jpg" 
+                  alt="Innovation Hacks 2.0" 
+                  fill 
+                  sizes="(max-width: 768px) 33vw, 250px" 
+                  className="object-cover transition-transform duration-500 group-hover/pic:scale-105" 
+                  loading="lazy" 
+                />
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
